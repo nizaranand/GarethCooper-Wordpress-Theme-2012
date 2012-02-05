@@ -61,7 +61,7 @@ a:hover {
 	padding: 16px 8px;
 	}
 
-#footer {
+#footer, #copyright {
 	color: #d0d0d1;
 	background-color: #454546;
 	padding: 1em;
@@ -69,6 +69,7 @@ a:hover {
 
 #copyright {
 	text-align: right;
+	font-size: 0.8em;
 	font-weight: 400;
 	font-style: italic;
 }
@@ -82,70 +83,20 @@ a:hover {
 	padding: 0 1em;
 	}
 
-/*
-*********  MENU  *************************************/
-.menu {
-	font-size: 0.8em;
-}
-
-.menu ul {
-	margin: 0;
-	position: relative;
-}
-
-.menu li {
-	padding: 0.5em 1em 0.5em;
-	position: relative;
-	bottom: 0.5em;
-	margin: 0 0.5em;
-	border-radius: 5px 5px 0 0;
-	box-shadow: inset 2px 3px 3px #222;
-	display: inline;
-	position: relative;
-}
-
-.menu li:first-child {
-	margin-left: 0;
-	}
-
-.menu li:hover {
+::selection {
 	background-color: #f60;
-	}
-
-
-
-.menu a {
-	
-	}
-
-
-
-
-.menu ul ul {
-	display: none;
-	position: absolute;
-	top: 2.3em;
-	width: auto;
+}
+::-moz-selection {
 	background-color: #f60;
-	box-shadow: inset 2px -3px 3px #222;
-	}
-
-.menu li:hover>ul {
-	display: inline-block;
 }
 
-.menu ul ul li {
-	box-shadow: none;
-	display: list-item;
-	list-style: none;
-	width: 5em;
-}
 
 /* =Menu
 -------------------------------------------------------------- */
 
 #access {
 	margin: 0 auto;
+	font-size: 0.8em;
 }
 #access ul {
 	list-style: none;
@@ -170,37 +121,48 @@ a:hover {
 #access li.current_page_item {
 	background-color: #f7f7f7;
 	box-shadow: none;
-	}
+}
 	
 #access li.current_page_item a {
 	color: #454546;
-	}
+}
+
 #access ul ul {
 	box-shadow: 0 3px 3px rgba(0,0,0,0.2);
 	-webkit-box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+	background-color: #f60;
 	display: none;
 	float: left;
 	position: absolute;
-	top: 2em;
+	top: 2.4em;
 	left: 0;
 	z-index: 99999;
 }
 #access ul ul ul {
 	left: 100%;
 	top: 0;
+	height: auto;
+	width: 15em;
+}
+#access ul ul li {
+	box-shadow: none;
+}
+#access ul ul li:hover {
+	background-color: #f70;
 }
 #access ul ul a {
-	background: #dedede;
-	line-height: 1em;
 	padding: .5em .5em .5em 1em;
 	width: 10em;
 	height: auto;
+}
+#access li:hover {
+	background-color: #f60;
+	box-shadow: none;
 }
 #access li:hover > a,
 #access ul ul :hover > a {
 }
 #access ul ul a:hover {
-	background: #cecece;
 }
 #access ul li:hover > ul {
 	display: block;

@@ -26,7 +26,7 @@
  * Set the content width based on the theme's design and stylesheet.
  */
 if ( ! isset( $content_width ) )
-	$content_width = 640; /* pixels */
+	$content_width = 974; /* pixels */
 
 if ( ! function_exists( 'garethcooper_setup' ) ):
 /**
@@ -99,6 +99,11 @@ add_filter( 'wp_page_menu_args', 'garethcooper_page_menu_args' );
  * Register widgetized area and update sidebar with default widgets
  */
 function garethcooper_widgets_init() {
+	register_sidebar( array(
+		'name' => __( 'Home Page Main Block', 'garethcooper' ),
+		'id' => 'home-main'
+	) );
+	
 	register_sidebar( array(
 		'name' => __( 'Footer Column 1', 'garethcooper' ),
 		'id' => 'footer-1',

@@ -37,16 +37,7 @@
 <div class="yui3-g">
 		<div id="menubar" class="yui3-u-1">
 			<div id="access" class="central">
-				<ul>
-					<li class="current_page_item"><a href="#">Home</a></li>
-					<li><a href="#">Page 2</a>
-					<ul>
-							<li><a href="#">Sub 1</a></li>
-							<li><a href="#">Sub 2</a></li>
-							<li><a href="#">Sub 3</a></li>
-						</ul></li>
-					<li><a href="#">Another Page</a></li>
-				</ul>
+				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 			</div>
 		</div>
 		<!-- #menubar -->
