@@ -8,59 +8,62 @@
  * E.g., it puts together the home page when no home.php file exists.
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package garethcooper
- * @since garethcooper 0.1
+ * @package Toolbox
+ * @since Toolbox 0.1
  */
 
 get_header(); ?>
 
 <div id="content" class="yui3-g central">
-	<?php if ( is_active_sidebar( 'home-main' ) ) : ?>
-			<div id="featureImages" class="yui3-u-1">
-					<?php dynamic_sidebar( 'home-main' ); ?>
-			</div>
-	<?php endif; ?>
 
-	<div id="imageRotator" class="yui3-u-1">
-		<img src="http://bucket.garethcooper.com/wp-content/uploads/2012/02/fire.jpg" alt="Fire" />
+	<?php if ( have_posts() ) : ?>
+
+	<div class="yui3-u-1">
+		<?php garethcooper_content_nav( 'nav-above' ); ?>
 	</div>
 
-			<div class="yui3-u-1-3">
-				<div class="gridPadding">
-					<h1 class="entry-title"><?php the_title(); ?></h1>
-					<?php the_content(); ?>
-				</div>
-			</div>
-			<div class="yui3-u-1-3">
-				<div class="gridPadding">
-					<h1>Latest Images</h1>
-					<p>Nam sollicitudin erat a velit vestibulum posuere in non
-						quam. Sed sit amet dolor elementum ligula imperdiet imperdiet.
-						Morbi accumsan convallis nisi, a viverra ipsum scelerisque vitae.
-						Nullam id sem eu massa blandit ultricies. Curabitur venenatis
-						bibendum dolor, ac accumsan odio auctor nec. Proin arcu arcu,
-						cursus id pulvinar ac, scelerisque eu massa. Nullam tempor, sapien
-						luctus interdum accumsan, nunc neque molestie sem, fermentum
-						ultrices turpis magna vel ipsum. Phasellus felis nisi, dapibus a
-						placerat a, molestie in nulla. Suspendisse potenti.</p>
-				</div>
-			</div>
-			<div class="yui3-u-1-3">
-				<div class="gridPadding">
-					<h1>Latest Posts</h1>
-					<ul>
-						<?php wp_get_archives(array(
-								'type' => 'postbypost',
-								'limit'=> 5)); ?>
-					</ul>
-					
-					<h1>Archives</h1>
-					<ul><?php wp_get_archives( array(
-							'type'   => 'monthly', 
-							'limit'  => 5 ) ); ?></ul>
-				</div>
-			</div>
+	<?php /* Start the Loop */ ?>
+
+	<div class="yui3-u-1">
+		<?php while ( have_posts() ) : the_post(); ?>
+		<?php
+		/* Include the Post-Format-specific template for the content.
+		 * If you want to overload this in a child theme then include a file
+		* called content-___.php (where ___ is the Post Format name) and that will be used instead.
+		*/
+		get_template_part( 'content', get_post_format() );
+		?>
+		<?php endwhile; ?>
+	</div>
+
+	<div class="yui3-u-1">
+		<?php garethcooper_content_nav( 'nav-below' ); ?>
+	</div>
+
+	<?php else : ?>
+
+	<article id="post-0" class="post no-results not-found">
+		<header class="entry-header">
+			<h1 class="entry-title">
+				<?php _e( 'Nothing Found', 'toolbox' ); ?>
+			</h1>
+		</header>
+		<!-- .entry-header -->
+
+		<div class="entry-content">
+			<p>
+				<?php _e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'toolbox' ); ?>
+			</p>
+			<?php get_search_form(); ?>
 		</div>
-		<!-- #content -->
+		<!-- .entry-content -->
+	</article>
+	<!-- #post-0 -->
+
+	<?php endif; ?>
+
+</div>
+<!-- #content -->
+
 
 <?php get_footer(); ?>

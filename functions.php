@@ -138,7 +138,6 @@ function garethcooper_content_nav( $nav_id ) {
 
 	?>
 	<nav id="<?php echo $nav_id; ?>">
-		<h1 class="assistive-text section-heading"><?php _e( 'Post navigation', 'garethcooper' ); ?></h1>
 
 	<?php if ( is_single() ) : // navigation links for single posts ?>
 

@@ -13,19 +13,20 @@
 
 get_header(); ?>
 
-		<div id="primary">
-			<div id="content" role="main">
+<div id="content" class="yui3-g central">
 
-				<?php while ( have_posts() ) : the_post(); ?>
+	<?php while ( have_posts() ) : the_post(); ?>
 
-					<?php get_template_part( 'content', 'page' ); ?>
+	<div class="yui3-u-1">
 
-					<?php comments_template( '', true ); ?>
+		<?php get_template_part( 'content', 'page' ); ?>
 
-				<?php endwhile; // end of the loop. ?>
+		<?php comments_template( '', true ); ?>
 
-			</div><!-- #content -->
-		</div><!-- #primary -->
+	</div>
 
-<?php get_sidebar(); ?>
+	<?php endwhile; // end of the loop. ?>
+
+</div> <!-- #content -->
+
 <?php get_footer(); ?>
