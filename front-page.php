@@ -27,8 +27,10 @@ get_header(); ?>
 
 			<div class="yui3-u-1-3">
 				<div class="gridPadding">
-					<h1 class="entry-title"><?php the_title(); ?></h1>
-					<?php the_content(); ?>
+					<?php while ( have_posts() ) : the_post(); ?>
+						<h1 class="entry-title"><?php the_title(); ?></h1>
+						<?php the_content(); ?>
+					<?php endwhile; ?>
 				</div>
 			</div>
 			<div class="yui3-u-1-3">

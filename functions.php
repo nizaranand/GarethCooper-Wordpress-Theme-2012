@@ -119,7 +119,7 @@ function garethcooper_widgets_init() {
 	) );
 	
 	register_sidebar( array(
-			'name' => __( 'Footer Column 2', 'garethcooper' ),
+			'name' => __( 'Footer Column 3', 'garethcooper' ),
 			'id' => 'footer-3',
 			'before_title' => '<h1 class="widget-title">',
 			'after_title' => '</h1>',

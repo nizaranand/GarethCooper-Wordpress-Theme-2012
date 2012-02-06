@@ -52,6 +52,11 @@ a:hover {
 	text-decoration: underline;
 }
 
+ul {
+	color: #444;
+	list-style: square;
+}
+
 #menubar {
 	background-color: #454546;
 	padding: 1em 0 0;
@@ -74,6 +79,14 @@ a:hover {
 	font-style: italic;
 }
 
+#footer h1 {
+	color: #888;
+}
+
+#footer a {
+	color: #999;
+}
+
 .central {
 	width: 974px;
 	margin: auto;
@@ -83,6 +96,9 @@ a:hover {
 	padding: 0 1em;
 	}
 
+.tagcloud {
+	text-align: justify;
+}
 ::selection {
 	background-color: #f60;
 }
@@ -117,6 +133,7 @@ a:hover {
 	line-height: 2em;
 	padding: 0 1em;
 	text-decoration: none;
+	width: 100%;
 }
 #access li.current_page_item {
 	background-color: #f7f7f7;
@@ -132,30 +149,28 @@ a:hover {
 	-webkit-box-shadow: 0 3px 3px rgba(0,0,0,0.2);
 	background-color: #f60;
 	display: none;
-	float: left;
 	position: absolute;
-	top: 2.4em;
+	top: 102%;
 	left: 0;
 	z-index: 99999;
 }
 #access ul ul ul {
 	left: 100%;
-	top: 0;
-	height: auto;
+	top: 5px;
 	width: 15em;
 }
 #access ul ul li {
 	box-shadow: none;
 	border-radius: 0;
 	margin: 0;
+	display: list-item;
+	width: 10em;
 }
 #access ul ul li:hover {
 	background-color: #f70;
 }
 #access ul ul a {
 	padding: .5em .5em .5em 1em;
-	width: 10em;
-	height: auto;
 }
 #access li:hover {
 	background-color: #f60;
