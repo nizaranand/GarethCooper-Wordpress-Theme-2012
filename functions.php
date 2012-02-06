@@ -26,7 +26,7 @@
  * Set the content width based on the theme's design and stylesheet.
  */
 if ( ! isset( $content_width ) )
-	$content_width = 974; /* pixels */
+	$content_width = 780; /* pixels */
 
 if ( ! function_exists( 'garethcooper_setup' ) ):
 /**

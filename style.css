@@ -67,7 +67,7 @@ article:first-child {
 
 .hr {
 	height: 1px;
-	width: 80%;
+	width: 95%;
 	margin: auto;
 	border-bottom: 1px solid #eee;
 }
@@ -122,6 +122,10 @@ article:first-child {
 .gridPadding {
 	padding: 0 1em;
 	}
+	
+.entry-meta {
+	font-size: 0.8em;
+}
 
 .tagcloud {
 	text-align: justify;
@@ -130,10 +134,11 @@ article:first-child {
 	color: #999;
 }
 .format-aside h1 {
-	float: left;
-	text-align: right;
-	width: 10em;
-	margin: 0 0.5em 0 0;
+	text-align: center;
+	margin: 0 0 0 0;
+	font-weight: 600;
+}
+.format-aside .entry-content {
 }
 ::selection {
 	background-color: #f60;
@@ -245,11 +250,18 @@ img.size-medium,
 	max-width: 100%; /* When images are too wide for containing element, force them to fit. */
 	height: auto; /* Override height to match resized width for correct aspect ratio. */
 }
-img.alignleft {
+.alignleft {
 	margin-right: 1em;
+	float: left;
 }
-img.alignright {
+.alignright {
 	margin-left: 1em;
+	float:right;
+}
+.aligncenter {
+	clear: both;
+	display:block;
+	margin: auto;
 }
 .wp-caption {
 	padding: .5em;
