@@ -21,39 +21,9 @@ get_header(); ?>
 			</div>
 	<?php endif; ?>
 
-	<div class="yui3-u-1">
-<div id="image_rotator">Loading images...</div>
-<div class="image_rotator_caption"></div>
-<style type="text/css">
-	#image_rotator {
-		float: left;
-		margin: 1em auto;
-		border: 1px solid #000000;
-		width: 970px;
-		height: 200px;
-	}
-	div.image_rotator_caption {
-		position: absolute;
-		margin-top: 175px;
-		margin-left: -75px;
-		width: 150px;
-		text-align: center;
-		left: 50%;
-		padding: 5px 10px;
-		background: black;
-		color: white;
-		font-family: sans-serif;
-		border-radius: 10px;
-		display: none;
-		z-index: 2;
-	}
-</style>
-<noscript>
-	<div id="image_rotator_nojs">
-		<img id="cimy_img_id" src="" alt="" />
+	<div id="imageRotator" class="yui3-u-1">
+		<?php wp_cycle(); ?>
 	</div>
-</noscript>
-</div>
 
 			<div class="yui3-u-1-3">
 				<div class="gridPadding">
