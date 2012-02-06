@@ -68,7 +68,7 @@ function garethcooper_setup() {
 	/**
 	 * Add support for the Aside and Gallery Post Formats
 	 */
-	add_theme_support( 'post-formats', array( 'image', 'gallery' ) );
+	add_theme_support( 'post-formats', array( 'aside', 'audio', 'image') );
 }
 endif; // garethcooper_setup
 
@@ -102,6 +102,11 @@ function garethcooper_widgets_init() {
 	register_sidebar( array(
 		'name' => __( 'Home Page Main Block', 'garethcooper' ),
 		'id' => 'home-main'
+	) );
+	
+	register_sidebar( array(
+			'name' => __( 'Sidebar', 'garethcooper' ),
+			'id' => 'sidebar'
 	) );
 	
 	register_sidebar( array(

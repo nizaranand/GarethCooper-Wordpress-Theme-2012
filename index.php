@@ -24,7 +24,8 @@ get_header(); ?>
 
 	<?php /* Start the Loop */ ?>
 
-	<div class="yui3-u-1">
+	<div class="yui3-u-5-6">
+		<div class="gridPadding">
 		<?php while ( have_posts() ) : the_post(); ?>
 		<?php
 		/* Include the Post-Format-specific template for the content.
@@ -33,11 +34,19 @@ get_header(); ?>
 		*/
 		get_template_part( 'content', get_post_format() );
 		?>
+		
+		<div class="hr"></div>
+		
 		<?php endwhile; ?>
+		</div>
 	</div>
+	
+	<div id="sidebar" class="yui3-u-1-6"><?php get_sidebar(); ?></div>
 
 	<div class="yui3-u-1">
+		<div class="gridPadding">
 		<?php garethcooper_content_nav( 'nav-below' ); ?>
+		</div>
 	</div>
 
 	<?php else : ?>

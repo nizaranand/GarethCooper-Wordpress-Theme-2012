@@ -34,7 +34,7 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div class="yui3-g">
+<div id="everything" class="yui3-g">
 		<div id="menubar" class="yui3-u-1">
 			<div id="access" class="central">
 				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
