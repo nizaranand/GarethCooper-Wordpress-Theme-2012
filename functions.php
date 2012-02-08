@@ -234,7 +234,8 @@ if ( ! function_exists( 'garethcooper_posted_on' ) ) :
  * @since garethcooper 1.2
  */
 function garethcooper_posted_on() {
-	printf( __( '<span class="sep">Posted on </span><a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s" pubdate>%4$s</time></a><span class="byline"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="%5$s" title="%6$s" rel="author">%7$s</a></span></span>', 'garethcooper' ),
+	printf( __( '<span class="byline"><span class="author vcard"><a class="url fn n" href="%5$s" title="%6$s" rel="author">%7$s</a></span></span><img src="http://localhost.garethcooper.com/wp-content/themes/garethcooper.com.1/img/my-account.png"/><br/>
+			<a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s" pubdate>%4$s</time></a><img src="wp-content/themes/garethcooper.com.1/img/calendar.png"/><br/>', 'garethcooper' ),
 		esc_url( get_permalink() ),
 		esc_attr( get_the_time() ),
 		esc_attr( get_the_date( 'c' ) ),

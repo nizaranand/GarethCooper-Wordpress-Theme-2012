@@ -70,6 +70,7 @@ article:first-child {
 	width: 95%;
 	margin: auto;
 	border-bottom: 1px solid #eee;
+	clear: both;
 }
 
 #everything {
@@ -123,8 +124,25 @@ article:first-child {
 	padding: 0 1em;
 	}
 	
-.entry-meta {
-	font-size: 0.8em;
+.entry-meta, .meta {
+	font-size: 0.7em;
+}
+.meta {
+	float: right;
+	text-align: right;
+	padding: 0 1em;
+	margin-left: 2em;
+	margin-bottom: 2em;
+	color: #999;
+	width: 14em;
+}
+.meta img {
+	vertical-align: middle;
+	margin: 0.3em;
+	margin-left: 0.5em;
+}
+.meta a {
+	color: #999;
 }
 
 .tagcloud {
@@ -133,12 +151,9 @@ article:first-child {
 .tagcloud a {
 	color: #999;
 }
-.format-aside h1 {
-	text-align: center;
-	margin: 0 0 0 0;
-	font-weight: 600;
-}
 .format-aside .entry-content {
+	font-style: italic;
+	font-weight: 400;
 }
 ::selection {
 	background-color: #f60;
