@@ -18,10 +18,6 @@ get_header(); ?>
 
 	<?php if ( have_posts() ) : ?>
 
-	<div class="yui3-u-1">
-		<?php garethcooper_content_nav( 'nav-above' ); ?>
-	</div>
-
 	<?php /* Start the Loop */ ?>
 
 	<div class="yui3-u-5-6">
@@ -38,16 +34,15 @@ get_header(); ?>
 		<div class="hr"></div>
 		
 		<?php endwhile; ?>
-		</div>
-	</div>
+		
+		<?php garethcooper_content_nav( 'nav-below' ); ?>
+		
+		<div class="hr"></div>
+		
+		</div> <!-- .gridPadding -->
+	</div> <!-- yui3-5-6 -->
 	
 	<div id="sidebar" class="yui3-u-1-6"><?php get_sidebar(); ?></div>
-
-	<div class="yui3-u-1">
-		<div class="gridPadding">
-		<?php garethcooper_content_nav( 'nav-below' ); ?>
-		</div>
-	</div>
 
 	<?php else : ?>
 

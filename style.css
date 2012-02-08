@@ -38,6 +38,9 @@ h1 {
 	font-style: italic;
 	margin: 0.5em 0;
 }
+h1 a:hover, h2 a:hover {
+	text-decoration: none;
+}
 
 p {
 	color: #454545;
@@ -52,6 +55,7 @@ a {
 
 a:hover {
 	text-decoration: underline;
+	color: #f60;
 }
 
 ul {
@@ -82,12 +86,30 @@ article:first-child {
 	padding: 1em 0 0;
 	}
 
+#content {
+	min-height: 20em;
+}
+
 #imageRotator {
 	padding: 16px 8px;
 	}
 
 #sidebar {
 	color: #999;
+}
+
+#nav-below {
+	font-size: 0.8em;
+	padding: 1em 0;
+}
+#nav-below a {
+	color: #999;
+}
+
+.nav-previous {
+}
+.nav-next {
+	float: right;
 }
 
 #footer, #copyright {
@@ -130,16 +152,20 @@ article:first-child {
 .meta {
 	float: right;
 	text-align: right;
-	padding: 0 1em;
+	padding: 1em 1em 0;
 	margin-left: 2em;
 	margin-bottom: 2em;
 	color: #999;
 	width: 14em;
 }
+.meta div {
+	clear:both;
+	padding: 0.3em 0;
+}
 .meta img {
 	vertical-align: middle;
-	margin: 0.3em;
-	margin-left: 0.5em;
+	margin-left: 0.8em;
+	float: right;
 }
 .meta a {
 	color: #999;
