@@ -234,8 +234,8 @@ if ( ! function_exists( 'garethcooper_posted_on' ) ) :
  * @since garethcooper 1.2
  */
 function garethcooper_posted_on() {
-	printf( __( '<div><img src="http://localhost.garethcooper.com/wp-content/themes/garethcooper.com.1/img/my-account.png"/><span class="author vcard"><a class="url fn n" href="%5$s" title="%6$s" rel="author">%7$s</a></span></div>
-			<div><img src="wp-content/themes/garethcooper.com.1/img/calendar.png"/><a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s" pubdate>%4$s</time></a></div>', 'garethcooper' ),
+	printf( __( '<div><span class="author vcard"><a class="url fn n" href="%5$s" title="%6$s" rel="author">%7$s</a></span></div>
+			<div><a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s" pubdate>%4$s</time></a></div>', 'garethcooper' ),
 		esc_url( get_permalink() ),
 		esc_attr( get_the_time() ),
 		esc_attr( get_the_date( 'c' ) ),
@@ -252,7 +252,7 @@ function garethcooper_posted_on() {
 				if ( $categories_list && garethcooper_categorized_blog() ) :
 			?>
 			<div class="cat-links">
-				<?php printf( __( '<img src="wp-content/themes/garethcooper.com.1/img/category.png"/>%1$s', 'garethcooper' ), $categories_list ); ?>
+				<?php printf( __( '%1$s', 'garethcooper' ), $categories_list ); ?>
 			</div>
 			<?php endif; // End if categories ?>
 
@@ -262,18 +262,17 @@ function garethcooper_posted_on() {
 				if ( $tags_list ) :
 			?>
 			<div class="tag-links">
-				<?php printf( __( '<img src="wp-content/themes/garethcooper.com.1/img/tag.png"/>%1$s', 'garethcooper' ), $tags_list ); ?>
+				<?php printf( __( '%1$s', 'garethcooper' ), $tags_list ); ?>
 			</div>
 			<?php endif; // End if $tags_list ?>
 		<?php endif; // End if 'post' == get_post_type() ?>
 
 		<?php if ( comments_open() || ( '0' != get_comments_number() && ! comments_open() ) ) : ?>
-		<div class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'garethcooper' ), __( '1 Comment', 'garethcooper' ), __( '% Comments', 'garethcooper' ) ); ?><img src="wp-content/themes/garethcooper.com.1/img/comment.png"/></div>
+		<div class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'garethcooper' ), __( '1 Comment', 'garethcooper' ), __( '% Comments', 'garethcooper' ) ); ?></div>
 		
 		<?php endif; ?>
 		
-		<?php edit_post_link( __( 'Edit', 'garethcooper' ), 
-					'<div class="edit-link"><img src="wp-content/themes/garethcooper.com.1/img/edit.png"/>', '</div>' ); ?>
+		<?php edit_post_link( __( 'Edit', 'garethcooper' ), '<div class="edit-link">', '</div>' ); ?>
 		<?php
 }
 endif;

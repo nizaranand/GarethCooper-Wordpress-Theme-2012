@@ -42,6 +42,10 @@ h1 a:hover, h2 a:hover {
 	text-decoration: none;
 }
 
+body.single h1 {
+	font-size: 2.5em;
+}
+
 p {
 	color: #454545;
 	text-align: justify;
@@ -154,13 +158,13 @@ article:first-child {
 	text-align: right;
 	padding: 1em 1em 0;
 	margin-left: 2em;
-	margin-bottom: 2em;
+	margin-bottom: 1em;
 	color: #999;
 	width: 14em;
 }
 .meta div {
 	clear:both;
-	padding: 0.3em 0;
+	margin: 0.5em 0;
 }
 .meta img {
 	vertical-align: middle;
@@ -180,6 +184,25 @@ article:first-child {
 .format-aside .entry-content {
 	font-style: italic;
 	font-weight: 400;
+}
+.author, time, .cat-links, .tag-links, .edit-link, .comments-link {
+	background: url('./img/sprites.png') no-repeat right -82px;
+	padding-right: 25px;
+}
+time {
+	background-position: right -2px;
+}
+.cat-links {
+	background-position: right -22px;
+}
+.tag-links {
+	background-position: right -102px;
+}
+.edit-link {
+	background-position: right -62px;
+}
+.comments-link {
+	background-position: right -42px;
 }
 ::selection {
 	background-color: #f60;

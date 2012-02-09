@@ -1,0 +1,2 @@
+montage calendar.png category.png comment.png edit.png my-account.png tag.png -geometry +2+2 -tile 1x -background none sprites.png
+mogrify -brightness-contrast 20 sprites.png
