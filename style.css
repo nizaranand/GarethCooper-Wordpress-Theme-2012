@@ -67,7 +67,7 @@ ul {
 	list-style: square;
 }
 article {
-	margin: 2em 0;
+	clear: both;
 }
 article:first-child {
 	margin-top: 0;
@@ -76,9 +76,12 @@ article:first-child {
 .hr {
 	height: 1px;
 	width: 95%;
-	margin: auto;
+	margin: 2em auto;
 	border-bottom: 1px solid #eee;
 	clear: both;
+}
+.single .hr {
+	margin: auto;
 }
 
 #everything {
@@ -150,7 +153,7 @@ article:first-child {
 	padding: 0 1em;
 	}
 	
-.entry-meta, .meta {
+.entry-meta, .meta, .comment-meta {
 	font-size: 0.7em;
 }
 .meta {

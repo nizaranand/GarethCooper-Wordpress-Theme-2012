@@ -29,4 +29,6 @@
 
 	<footer class="entry-meta">
 	</footer><!-- #entry-meta -->
+	
+	<div class="hr"></div>
 </article><!-- #post-<?php the_ID(); ?> -->

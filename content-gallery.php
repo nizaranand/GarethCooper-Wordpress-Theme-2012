@@ -50,5 +50,7 @@
 		<?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'garethcooper' ), 'after' => '</div>' ) ); ?>
 	</div><!-- .entry-content -->
 	<?php endif; ?>
+	
+	<div class="hr"></div>
 
 </article><!-- #post-<?php the_ID(); ?> -->

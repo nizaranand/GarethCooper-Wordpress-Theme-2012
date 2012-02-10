@@ -31,13 +31,9 @@ get_header(); ?>
 		get_template_part( 'content', get_post_format() );
 		?>
 		
-		<div class="hr"></div>
-		
 		<?php endwhile; ?>
 		
 		<?php garethcooper_content_nav( 'nav-below' ); ?>
-		
-		<div class="hr"></div>
 		
 		</div> <!-- .gridPadding -->
 	</div> <!-- yui3-5-6 -->
@@ -56,7 +52,7 @@ get_header(); ?>
 
 		<div class="entry-content">
 			<p>
-				<?php _e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'toolbox' ); ?>
+				<?php _e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'garethcooper' ); ?>
 			</p>
 			<?php get_search_form(); ?>
 		</div>
