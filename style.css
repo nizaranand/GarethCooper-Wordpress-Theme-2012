@@ -53,7 +53,12 @@ p {
 }
 
 a {
-	color: #44c;
+	//color: #44c;
+	color: #449;
+	transition: color .5s;
+	-moz-transition: color .5s; /* Firefox 4 */
+	-webkit-transition: color .5s; /* Safari and Chrome */
+	-o-transition: color .5s; /* Opera */
 	text-decoration: none;
 }
 
@@ -68,6 +73,7 @@ ul {
 }
 article {
 	clear: both;
+	margin-bottom: 1em;
 }
 article:first-child {
 	margin-top: 0;
@@ -152,6 +158,41 @@ article:first-child {
 .gridPadding {
 	padding: 0 1em;
 	}
+
+#content article {
+	padding: 1em;
+	border-radius: 10px;
+	
+	/* BACKGROUND GRADIENTS */
+	/* IE10 Consumer Preview */ 
+	background-image: -ms-linear-gradient(bottom right, #F2F2F2 0%, rgba(255,255,255,0) 40%);
+
+	/* Mozilla Firefox */ 
+	background-image: -moz-linear-gradient(bottom right, #F2F2F2 0%, rgba(255,255,255,0) 40%);
+	
+	/* Opera */ 
+	background-image: -o-linear-gradient(bottom right, #F2F2F2 0%, rgba(255,255,255,0));
+	
+	/* Webkit (Safari/Chrome 10) */ 
+	background-image: -webkit-gradient(linear, right bottom, left top, color-stop(0, #F2F2F2), color-stop(.4, rgba(255,255,255,0)));
+	
+	/* Webkit (Chrome 11+) */ 
+	background-image: -webkit-linear-gradient(bottom right, #F2F2F2 0%, rgba(255,255,255,0) 40%);
+	
+	/* W3C Markup, IE10 Release Preview */ 
+	background-image: linear-gradient(to top left, #F2F2F2 0%, rgba(255,255,255,0) 40%);
+}
+
+#content article.format-aside, #content article.format-status {
+	padding-bottom: 0;
+	background: none;
+}
+
+#content article.format-aside {
+	border: 1px solid #eee;
+	border-left: none;
+	border-right: none;
+}
 	
 .entry-meta, .meta, .comment-meta {
 	font-size: 0.7em;
@@ -174,9 +215,7 @@ article:first-child {
 	margin-left: 0.8em;
 	float: right;
 }
-.meta a {
-	color: #999;
-}
+
 
 .tagcloud {
 	text-align: justify;
@@ -188,24 +227,39 @@ article:first-child {
 	font-style: italic;
 	font-weight: 400;
 }
+
+.entry-meta {
+	padding: 1em 0;
+	text-align: right;
+}
+
+.entry-meta div {
+	display:inline-block;
+}
+
+.entry-meta a {
+	color: #999;
+}
+
 .author, time, .cat-links, .tag-links, .edit-link, .comments-link {
-	background: url('./img/sprites.png') no-repeat right -82px;
-	padding-right: 25px;
+	background: url('./img/sprites.png') no-repeat left -82px;
+	padding-left: 25px;
+	margin-right: 1em;
 }
 time {
-	background-position: right -2px;
+	background-position: left -2px;
 }
 .cat-links {
-	background-position: right -22px;
+	background-position: left -22px;
 }
 .tag-links {
-	background-position: right -102px;
+	background-position: left -102px;
 }
 .edit-link {
-	background-position: right -62px;
+	background-position: left -62px;
 }
 .comments-link {
-	background-position: right -42px;
+	background-position: left -42px;
 }
 ::selection {
 	background-color: #f60;

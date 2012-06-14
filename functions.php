@@ -68,7 +68,7 @@ function garethcooper_setup() {
 	/**
 	 * Add support for the Aside and Gallery Post Formats
 	 */
-	add_theme_support( 'post-formats', array( 'aside', 'audio', 'image') );
+	add_theme_support( 'post-formats', array( 'aside', 'audio', 'image', 'status') );
 }
 endif; // garethcooper_setup
 

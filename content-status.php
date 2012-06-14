@@ -1,6 +1,7 @@
 <?php
 /**
- * The template for displaying posts in the Image Post Format on index and archive pages
+ * The template for displaying posts in the Status Post Format on index and archive pages
+ * We're assuming this'll link out to Twitter or FB etc, so no internal link required.
  *
  * Learn more: http://codex.wordpress.org/Post_Formats
  *
@@ -10,9 +11,6 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">		
-		<h1 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'garethcooper' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
-	</header><!-- .entry-header -->
 
 	<div class="entry-content">
 		<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'garethcooper' ) ); ?>

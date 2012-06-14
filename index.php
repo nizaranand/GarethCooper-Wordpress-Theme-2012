@@ -20,8 +20,7 @@ get_header(); ?>
 
 	<?php /* Start the Loop */ ?>
 
-	<div class="yui3-u-5-6">
-		<div class="gridPadding">
+	<div class="yui3-u-1">
 		<?php while ( have_posts() ) : the_post(); ?>
 		<?php
 		/* Include the Post-Format-specific template for the content.
@@ -35,10 +34,7 @@ get_header(); ?>
 		
 		<?php garethcooper_content_nav( 'nav-below' ); ?>
 		
-		</div> <!-- .gridPadding -->
-	</div> <!-- yui3-5-6 -->
-	
-	<div id="sidebar" class="yui3-u-1-6"><?php get_sidebar(); ?></div>
+	</div> <!-- yui3-u-1 -->
 
 	<?php else : ?>
 
