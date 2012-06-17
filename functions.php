@@ -57,6 +57,7 @@ function garethcooper_setup() {
 	 * Add default posts and comments RSS feed links to head
 	 */
 	add_theme_support( 'automatic-feed-links' );
+	add_theme_support( 'theme-options' );
 
 	/**
 	 * This theme uses wp_nav_menu() in one location.
@@ -69,6 +70,9 @@ function garethcooper_setup() {
 	 * Add support for the Aside and Gallery Post Formats
 	 */
 	add_theme_support( 'post-formats', array( 'aside', 'audio', 'image', 'status') );
+	
+	// Load up our theme options page and related code.
+	require( get_template_directory() . '/inc/theme-options.php' );
 }
 endif; // garethcooper_setup
 
