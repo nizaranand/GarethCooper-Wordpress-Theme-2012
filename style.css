@@ -1,5 +1,5 @@
 /*
-Theme Name: Gareth Cooper
+Theme Name: Gareth Cooper 2012
 Theme URI: http://garethcooper.com
 Author: Gareth Cooper
 Author URI: http://garethcooper.com/
@@ -36,7 +36,7 @@ h1 {
 	font-size: 1.75em;
 	font-weight: 800;
 	font-style: italic;
-	margin: 0 0 0.5em;
+	margin: 0.5em 0 0.3em;
 }
 h1 a:hover, h2 a:hover {
 	text-decoration: none;
@@ -70,6 +70,17 @@ a:hover {
 ul {
 	color: #444;
 	list-style: square;
+	margin: 0 1em 0 2em;
+}
+
+select {
+	background-color: #CCCCCC;
+    border-color: #666;
+    border-radius: 5px 5px 5px 0;
+    border-style: none none solid;
+    border-width: medium medium 1px;
+    padding-left: 0.5em;
+    padding-bottom: 0.05m;
 }
 article {
 	clear: both;
@@ -105,7 +116,7 @@ article:first-child {
 }
 
 #imageRotator {
-	padding: 16px 8px;
+	padding: 16px 8px 0;
 	}
 
 #sidebar {
