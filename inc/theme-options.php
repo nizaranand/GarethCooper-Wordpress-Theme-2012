@@ -10,7 +10,7 @@
  *
  * @since Twenty Eleven 1.0
  */
-function twentyeleven_theme_options_init() {
+function garethcooper_theme_options_init() {
 
 	register_setting(
 			'garethcooper_options',       // Options group, see settings_fields() call in twentyeleven_theme_options_render_page()
@@ -20,12 +20,21 @@ function twentyeleven_theme_options_init() {
 
 	// Register our settings field group
 	add_settings_section(
-			'general', // Unique identifier for the settings section
-			'General', // Section title (we don't want one)
+			'frontpage', // Unique identifier for the settings section
+			'Frontpage', // Section title (we don't want one)
 			'__return_false', // Section callback (we don't want anything)
-			'theme_options' // Menu slug, used to uniquely identify the page; see twentyeleven_theme_options_add_page()
+			'theme_options' // Menu slug, used to uniquely identify the page; see garethcooper_theme_options_add_page()
+	);		
+	
+	// Register our individual settings fields
+	add_settings_field(
+		'frontpage_headline',  // Unique identifier for the field for this section
+		__( 'Headline', 'garethcooper' ), // Setting field label
+		'garethcooper_settings_field_frontpage_headline', // Function that renders the settings field
+		'theme_options', // Menu slug, used to uniquely identify the page; see twentyeleven_theme_options_add_page()
+		'frontpage' // Settings section. Same as the first argument in the add_settings_section() above
 	);
-
+	
 }
 add_action( 'admin_init', 'garethcooper_theme_options_init' );
 
@@ -87,3 +96,44 @@ function garethcooper_theme_options_help() {
 		add_contextual_help( $screen, $help . $sidebar );
 	}
 }
+
+function garethcooper_settings_field_frontpage_headline() {
+	$options = garethcooper_get_theme_options();
+?>
+
+	<div class="">
+		<label class="description">
+			<input type="text" name="garethcooper_theme_options[frontpage_headline]" value="<?php echo $options['frontpage_headline']; ?>" />
+		</label>
+	</div>
+
+<?php
+}
+
+function garethcooper_theme_options_render_page() {
+	?>
+	<div class="wrap">
+		<?php screen_icon(); ?>
+		<?php $theme_name = function_exists( 'wp_get_theme' ) ? wp_get_theme() : get_current_theme(); ?>
+		<h2><?php printf( __( '%s Theme Options', 'garethcooper' ), $theme_name ); ?></h2>
+		<?php settings_errors(); ?>
+
+		<form method="post" action="options.php">
+			<?php
+				settings_fields( 'garethcooper_options' );
+				do_settings_sections( 'theme_options' );
+				submit_button();
+			?>
+		</form>
+	</div>
+	<?php
+}
+
+function garethcooper_get_theme_options() {
+	return get_option( 'garethcooper_theme_options' );
+}
+
+function garethcooper_theme_options_validate( $input ) {
+	return $input;
+}
+
