@@ -57,7 +57,6 @@ p {
 }
 
 a {
-	//color: #44c;
 	color: #449;
 	transition: color .5s;
 	-moz-transition: color .5s; /* Firefox 4 */
@@ -79,12 +78,12 @@ ul {
 
 select {
 	background-color: #CCCCCC;
-    border-color: #666;
-    border-radius: 5px 5px 5px 0;
-    border-style: none none solid;
-    border-width: medium medium 1px;
-    padding-left: 0.5em;
-    padding-bottom: 0.05m;
+	border-color: #666;
+	border-radius: 5px 5px 5px 0;
+	border-style: none none solid;
+	border-width: medium medium 1px;
+	padding-left: 0.5em;
+	padding-bottom: 0.05m;
 }
 article {
 	clear: both;
@@ -165,9 +164,10 @@ article {
 
 #footer h1 {
 	color: #888;
+	margin-top: 0.5em;
 }
 
-#footer a {
+#footer a, #footer p {
 	color: #999;
 }
 
