@@ -3,8 +3,8 @@ Theme Name: Gareth Cooper 2012
 Theme URI: http://garethcooper.com
 Author: Gareth Cooper
 Author URI: http://garethcooper.com/
-Description: New theme for garethcooper.com designed to show off images as priority
-Version: 0.0.1
+Description: garethcooper.com 2012 Theme. Designed to show off images as priority
+Version: 0.1-beta-1
 License: GNU General Public License
 License URI: license.txt
 Tags: 
@@ -95,7 +95,7 @@ article {
 	background: none;
 }
 
-#content article.format-aside {
+#content article.format-aside, .single article, .page article {
 	border: none;
 }
 
