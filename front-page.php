@@ -12,7 +12,9 @@
  * @since garethcooper 0.1
  */
 
-get_header(); ?>
+get_header();
+$options = get_option( 'garethcooper_theme_options' );
+?>
 
 <div id="content" class="yui3-g central">
 
@@ -22,7 +24,7 @@ get_header(); ?>
 			alt="Fire" width=958 />
 	</div>
 
-	<div class="yui3-u-1-3">
+	<div class="yui3-u-1-3" id="frontpage-text">
 		<div class="gridPadding">
 			<?php while ( have_posts() ) : the_post(); ?>
 			<h1 class="entry-title">
@@ -32,13 +34,15 @@ get_header(); ?>
 			<?php endwhile; ?>
 		</div>
 	</div>
-	<div class="yui3-u-1-3">
+	
+	<div class="yui3-u-1-3" id="frontpage-images">
 		<div class="gridPadding">
 			<h1>Latest Images</h1>
 			<?php if (class_exists('wp_media_tags_plugin')) { wp_media_tags_plugin::media_tags_query('frontpage', 'thumbnail'); }?>
 		</div>
 	</div>
-	<div class="yui3-u-1-3">
+	
+	<div class="yui3-u-1-3" id="frontpage-latest">
 		<div class="gridPadding">
 			<h1>Latest Posts</h1>
 			<ul>

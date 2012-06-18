@@ -97,6 +97,9 @@ function garethcooper_theme_options_help() {
 	}
 }
 
+/**
+ * Renders the frontpage headline text field
+ */
 function garethcooper_settings_field_frontpage_headline() {
 	$options = garethcooper_get_theme_options();
 ?>
@@ -110,6 +113,9 @@ function garethcooper_settings_field_frontpage_headline() {
 <?php
 }
 
+/**
+ * Renders the page container
+ */
 function garethcooper_theme_options_render_page() {
 	?>
 	<div class="wrap">
@@ -129,10 +135,26 @@ function garethcooper_theme_options_render_page() {
 	<?php
 }
 
+function garethcooper_admin_enqueue_scripts( $hook_suffix ) {
+	wp_enqueue_style( 'garethcooper-admin-style', get_template_directory_uri() . '/inc/theme-options.css', false, '2012-06-18' );
+	wp_enqueue_script( 'garethcooper-admin-js', get_template_directory_uri() . '/inc/theme-options.js', false, '2012-06-18' );
+}
+//add_action( 'admin_print_styles-appearance_page_theme_options', 'garethcooper_admin_enqueue_scripts' );
+
+/**
+ * Gets theme-specific options from db
+ *
+ * TODO Replace missing options with defaults
+ */
 function garethcooper_get_theme_options() {
 	return get_option( 'garethcooper_theme_options' );
 }
 
+/**
+ * Validates input before storing to db
+ *
+ * TODO all of this function!
+ */
 function garethcooper_theme_options_validate( $input ) {
 	return $input;
 }

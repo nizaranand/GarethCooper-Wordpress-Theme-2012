@@ -16,7 +16,7 @@
  *
  */
 function twentyeleven_admin_enqueue_scripts( $hook_suffix ) {
-	wp_enqueue_style( 'twentyeleven-theme-options', get_template_directory_uri() . '/inc/theme-options.css', false, '2011-04-28' );
+	wp_enqueue_style( 'twentyeleven-theme-options', get_template_directory_uri() . '/inc/theme-options.css', false, '2012-06-18' );
 	wp_enqueue_script( 'twentyeleven-theme-options', get_template_directory_uri() . '/inc/theme-options.js', array( 'farbtastic' ), '2011-06-10' );
 	wp_enqueue_style( 'farbtastic' );
 }
