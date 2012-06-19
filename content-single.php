@@ -9,7 +9,13 @@
 		<h1 class="entry-title"><?php the_title(); ?></h1>
 	</header><!-- .entry-header -->
 	
-	<?php the_post_thumbnail('full'); ?>
+	<?php if ( has_post_thumbnail() ) :
+		$full_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full');
+		?>
+		<a href="<?php echo $full_image_url[0]; ?>">
+		<?php the_post_thumbnail('gc-full'); ?>
+		</a>
+	<?php endif; ?>
 
 	<div class="entry-content">
 		<?php the_content(); ?>
