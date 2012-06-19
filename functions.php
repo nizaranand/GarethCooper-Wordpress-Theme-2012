@@ -71,8 +71,11 @@ function garethcooper_setup() {
 	 */
 	add_theme_support( 'post-formats', array( 'aside', 'audio', 'image', 'status') );
 	
+	//Theme support for thumbnails (posts only)
+	add_theme_support( 'post-thumbnails', array( 'post' ) );
+	
 	// Load up our theme options page and related code.
-	require( get_template_directory() . '/inc/theme-options.php' );
+	//require( get_template_directory() . '/inc/theme-options.php' );
 }
 endif; // garethcooper_setup
 

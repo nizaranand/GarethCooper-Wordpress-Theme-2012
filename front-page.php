@@ -38,7 +38,24 @@ $options = get_option( 'garethcooper_theme_options' );
 	<div class="yui3-u-1-3" id="frontpage-images">
 		<div class="gridPadding">
 			<h1>Latest Images</h1>
-			<?php if (class_exists('wp_media_tags_plugin')) { wp_media_tags_plugin::media_tags_query('frontpage', 'thumbnail'); }?>
+			
+			<?php
+			$args = array( 'post_type' => 'post', 'numberposts' => -1 ); 
+			$posts = get_posts( $args );
+			
+			if ($posts) {
+				foreach ( $posts as $post ) {
+					if (has_post_thumbnail( $post->ID )) {
+					?>
+						<a href="<?php echo get_permalink($post->ID); ?>">
+						<?php echo get_the_post_thumbnail($post->ID, 'thumbnail'); ?>
+						</a>
+					<?
+					}
+				}
+			}
+			?>
+			
 		</div>
 	</div>
 	

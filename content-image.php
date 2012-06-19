@@ -13,6 +13,12 @@
 	<header class="entry-header">		
 		<h1 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'garethcooper' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
 	</header><!-- .entry-header -->
+	
+	<?php if ( has_post_thumbnail() ) : ?>
+	<div class="thumbnail">
+		<?php the_post_thumbnail('thumbnail', array('class' => 'alignleft')); ?>
+	</div>
+	<?php endif; ?>
 
 	<div class="entry-content">
 		<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'garethcooper' ) ); ?>

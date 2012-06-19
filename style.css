@@ -233,6 +233,11 @@ article {
 .tagcloud a {
 	color: #999;
 }
+
+.thumbnail {
+	margin-right: 2em;
+}
+
 .format-aside .entry-content {
 	font-style: italic;
 	font-weight: 400;
