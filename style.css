@@ -102,7 +102,11 @@ article {
 }
 
 #everything {
-	background-color: #f7f7f7;
+	background-color: #f7f7f7;	
+	background-image: -webkit-linear-gradient(bottom, #F1F2F3, #F7F7F7 10%); /* Chrome 10+, Saf5.1+, iOS 5+ */
+	background-image:    -moz-linear-gradient(bottom, #F1F2F3, #F7F7F7 10%); /* FF3.6+ */
+	background-image:      -o-linear-gradient(bottom, #F1F2F3, #F7F7F7 10%); /* Opera 11.10+ */
+	background-image:         linear-gradient(to top, #F1F2F3, #F7F7F7 10%);
 }
 
 #menubar {
