@@ -76,15 +76,6 @@ ul {
 	margin: 0 1em 0 2em;
 }
 
-select {
-	background-color: #CCCCCC;
-	border-color: #666;
-	border-radius: 5px 5px 5px 0;
-	border-style: none none solid;
-	border-width: medium medium 1px;
-	padding-left: 0.5em;
-	padding-bottom: 0.05m;
-}
 article {
 	clear: both;
 	margin: 1em 0;
@@ -169,6 +160,16 @@ article {
 
 #footer a, #footer p {
 	color: #999;
+}
+
+#footer select {
+	background-color: #CCCCCC;
+	border-color: #666;
+	border-radius: 5px 5px 5px 0;
+	border-style: none none solid;
+	border-width: medium medium 1px;
+	padding-left: 0.5em;
+	padding-bottom: 0.05m;
 }
 
 .central {
@@ -311,6 +312,7 @@ time {
 	margin: 0 0.5em;
 	border-radius: 5px 5px 0 0;
 	box-shadow: inset 2px 3px 3px rgba(0,0,0,0.3);
+	background-color: #404041;
 	transition: background-color .2s;
 	-moz-transition: background-color .2s; /* Firefox 4 */
 	-webkit-transition: background-color .2s; /* Safari and Chrome */
@@ -341,22 +343,27 @@ time {
 	top: 102%;
 	left: 0;
 	z-index: 99999;
-	border-bottom-right-radius: 5px;
+	border-left: 2px solid #f60;
+	border-bottom-left-radius: 5px;
 }
 #access ul ul ul {
 	left: 100%;
-	top: 5px;
-	width: 15em;
+	top: 3px;
+	border-left: none;
+	border-radius: 0;
 }
 #access ul ul li {
 	box-shadow: none;
 	border-radius: 0;
 	margin: 0;
 	display: list-item;
-	width: 10em;
+	width: 16em;
+}
+#access ul ul li:last-child {
+	border-bottom-left-radius: 5px;
 }
 #access ul ul li:hover {
-	background-color: #f70;
+	background-color: #f60;
 }
 #access ul ul a {
 	padding: .5em .5em .5em 1em;
