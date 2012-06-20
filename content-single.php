@@ -12,7 +12,7 @@
 	<?php if ( has_post_thumbnail() ) :
 		$full_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full');
 		?>
-		<a href="<?php echo $full_image_url[0]; ?>">
+		<a href="<?php echo $full_image_url[0]; ?>" rel="lightbox[<?php the_ID(); ?>]">
 		<?php the_post_thumbnail('gc-full'); ?>
 		</a>
 	<?php endif; ?>
