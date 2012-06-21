@@ -61,6 +61,7 @@ p {
 
 a {
 	color: #449;
+	font-weight: 400;
 	transition: color .5s;
 	-moz-transition: color .5s; /* Firefox 4 */
 	-webkit-transition: color .5s; /* Safari and Chrome */
