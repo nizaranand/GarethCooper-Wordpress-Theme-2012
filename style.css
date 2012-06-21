@@ -41,6 +41,9 @@ h1 {
 h1:first-child {
 	margin-top: 0;
 }
+h1 a {
+	font-weight: inherit;
+}
 
 h1 a:hover, h2 a:hover {
 	text-decoration: none;
