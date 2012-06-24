@@ -258,6 +258,7 @@ article {
 .entry-meta {
 	padding: 1em 0;
 	text-align: right;
+	color: #999;
 }
 
 .entry-meta div {
@@ -265,7 +266,7 @@ article {
 }
 
 .entry-meta a {
-	color: #999;
+	color: inherit;
 }
 
 .author, time, .cat-links, .tag-links, .edit-link, .comments-link {

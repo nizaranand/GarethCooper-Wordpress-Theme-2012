@@ -67,18 +67,9 @@ $options = get_option( 'garethcooper_theme_options' );
 						'type' => 'postbypost',
 								'limit'=> 5)); ?>
 			</ul>
-			
-			<!-- 
-			<h1>Archives</h1>
-			<ul>
-				<?php wp_get_archives( array(
-						'type'   => 'monthly',
-						'limit'  => 5 ) ); ?>
-			</ul>
-			 -->
 		</div>
 	</div>
-</div>
-<!-- #content -->
+	
+</div> <!-- #content -->
 
 <?php get_footer(); ?>
