@@ -54,7 +54,7 @@ get_header(); ?>
 							break;
 					}
 					
-					echo sprintf('<div class="author-link vcard"><a href="%1$s?rel=author" rel="author">%2$s</a></div>',
+					echo sprintf('<div class="author-link vcard"><a href="%1$s?rel=author" rel="me">%2$s</a></div>',
 						get_the_author_meta($fieldKey),
 						$desc
 						);
