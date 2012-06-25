@@ -76,6 +76,7 @@ function garethcooper_setup() {
 	
 	//Full theme width image
 	add_image_size( 'gc-full', 958, 9999 ); //Full theme width (and unlimited height)
+	add_image_size( 'gc-frontpage-featured', 958, 200, true ); //Frontpage featured image, cropped
 	add_image_size( 'gc-frontpage-thumb', 84, 84, true ); //Frontpage thumbnail, cropped
 	
 	// Load up our theme options page
