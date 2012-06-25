@@ -278,7 +278,7 @@ article {
 	color: inherit;
 }
 
-span.author, time, .cat-links, .tag-links, .edit-link, .comments-link {
+span.author, time, .cat-links, .tag-links, .edit-link, .comments-link, .author-link {
 	background: url('./img/sprites.png') no-repeat left -82px;
 	padding-left: 25px;
 	margin-right: 1em;
@@ -297,6 +297,11 @@ time {
 }
 .comments-link {
 	background-position: left -42px;
+}
+.author-link {
+	background-position: right -122px;
+	padding-right: 25px;
+	padding-left: 0;
 }
 ::selection {
 	background-color: #f60;

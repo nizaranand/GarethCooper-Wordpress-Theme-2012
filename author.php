@@ -9,7 +9,7 @@
 get_header(); ?>
 
 <div id="content" class="yui3-g central">
-	<div class="yui3-u-1">
+	<div class="yui3-u-1-2">
 
 			<?php if ( have_posts() ) : ?>
 
@@ -30,14 +30,40 @@ get_header(); ?>
 				<?php 
 				the_author_meta('description');
 				?>
+		</div>
+		<div class="yui3-u-1-2" style="text-align:right;">
 				
 				<h2><?php the_author(); ?> on the Web</h2>
 				
+				<div class="entry-meta">
 				<?php
-				the_author_meta('facebook');
-				the_author_meta('googleplus');
-				the_author_meta('twitter');
+				$fields = garethcooper_get_custom_user_fields();
+				foreach($fields as $fieldKey => $fieldValue) {
+					if (get_the_author_meta($fieldKey) == '')
+						break;
+						
+					switch ($fieldKey) {
+						case 'twitter':
+							$desc = "Twitter";
+							break;
+						case 'googleplus':
+							$desc = "Google+";
+							break;
+						case 'facebook':
+							$desc = 'Facebook';
+							break;
+					}
+					
+					echo sprintf('<div class="author-link vcard"><a href="%1$s?rel=author" rel="author">%2$s</a></div>',
+						get_the_author_meta($fieldKey),
+						$desc
+						);
+				}
 				?>
+				</div>
+				
+		</div>
+		<div class="yui3-u-1">
 				
 				<h2>Posts by <?php the_author(); ?></h2>
 				
