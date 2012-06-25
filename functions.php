@@ -72,13 +72,13 @@ function garethcooper_setup() {
 	add_theme_support( 'post-formats', array( 'aside', 'audio', 'image', 'status') );
 	
 	//Theme support for thumbnails (posts only)
-	add_theme_support( 'post-thumbnails', array( 'post' ) );
+	add_theme_support( 'post-thumbnails', array( 'post', 'page' ) );
 	
 	//Full theme width image
 	add_image_size( 'gc-full', 958, 9999 ); //Full theme width (and unlimited height)
 	add_image_size( 'gc-frontpage-thumb', 84, 84, true ); //Frontpage thumbnail, cropped
 	
-	// Load up our theme options page and related code.
+	// Load up our theme options page
 	//require( get_template_directory() . '/inc/theme-options.php' );
 }
 endif; // garethcooper_setup

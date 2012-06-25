@@ -19,7 +19,7 @@ $options = get_option( 'garethcooper_theme_options' );
 <div id="content" class="yui3-g central">
 
 	<div id="imageRotator" class="yui3-u-1">
-		<?php the_post_thumbnail(); ?>
+		<?php echo get_the_post_thumbnail($post->ID, 'gc-full'); ?>
 	</div>
 
 	<div class="yui3-u-1-3" id="frontpage-text">

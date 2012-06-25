@@ -33,8 +33,6 @@ get_header(); ?>
 		<?php endwhile; ?>
 		
 		<?php garethcooper_content_nav( 'nav-below' ); ?>
-		
-	</div> <!-- yui3-u-1 -->
 
 	<?php else : ?>
 
@@ -58,8 +56,8 @@ get_header(); ?>
 
 	<?php endif; ?>
 
-</div>
-<!-- #content -->
+</div> <!-- yui3-u-1 -->
+</div> <!-- #content -->
 
 
 <?php get_footer(); ?>

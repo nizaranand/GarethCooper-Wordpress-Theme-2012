@@ -8,8 +8,8 @@
 
 get_header(); ?>
 
-		<section id="primary">
-			<div id="content" role="main">
+<div id="content" class="yui3-g">
+	<div class="yui3-u-3-4">
 
 			<?php if ( have_posts() ) : ?>
 
@@ -43,8 +43,11 @@ get_header(); ?>
 
 			<?php endif; ?>
 
-			</div><!-- #content -->
-		</section><!-- #primary -->
+			</div><!-- .yui3-u-3-4 -->
 
-<?php get_sidebar(); ?>
+			<div class="yui3-u-3-4">
+				<?php get_sidebar(); ?>
+			</div>
+
+	</div> <!-- #content -->
 <?php get_footer(); ?>
