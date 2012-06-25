@@ -16,7 +16,9 @@
 	
 	<?php if ( has_post_thumbnail() ) : ?>
 	<div class="thumbnail">
-		<?php the_post_thumbnail('thumbnail', array('class' => 'alignleft')); ?>
+		<a href="<?php the_permalink(); ?>" >
+			<?php the_post_thumbnail('thumbnail', array('class' => 'alignleft')); ?>
+		</a>
 	</div>
 	<?php endif; ?>
 

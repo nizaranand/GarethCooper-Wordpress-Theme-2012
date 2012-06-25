@@ -19,9 +19,7 @@ $options = get_option( 'garethcooper_theme_options' );
 <div id="content" class="yui3-g central">
 
 	<div id="imageRotator" class="yui3-u-1">
-		<img
-			src="http://bucket.garethcooper.com/wp-content/uploads/2012/02/fire.jpg"
-			alt="Fire" width=958 />
+		<?php the_post_thumbnail(); ?>
 	</div>
 
 	<div class="yui3-u-1-3" id="frontpage-text">
@@ -48,7 +46,7 @@ $options = get_option( 'garethcooper_theme_options' );
 					if (has_post_thumbnail( $post->ID )) {
 					?>
 						<a href="<?php echo get_permalink($post->ID); ?>">
-						<?php echo get_the_post_thumbnail($post->ID, 'thumbnail'); ?>
+						<?php echo get_the_post_thumbnail($post->ID, 'gc-frontpage-thumb'); ?>
 						</a>
 					<?
 					}

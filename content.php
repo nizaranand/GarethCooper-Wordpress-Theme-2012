@@ -10,6 +10,14 @@
 		<h1 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'garethcooper' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
 		
 	</header><!-- .entry-header -->
+	
+	<?php if ( has_post_thumbnail() ) : ?>
+	<div class="thumbnail">
+		<a href="<?php the_permalink(); ?>" >
+			<?php the_post_thumbnail('thumbnail', array('class' => 'alignleft')); ?>
+		</a>
+	</div>
+	<?php endif; ?>
 
 	<?php if ( is_search() ) : // Only display Excerpts for Search ?>
 	<div class="entry-summary">
