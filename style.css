@@ -216,7 +216,11 @@ article {
 	/* W3C Markup, IE10 Release Preview */ 
 	background-image: linear-gradient(to top left, #F2F2F2 0%, rgba(255,255,255,0) 40%);
 }
-	
+
+.page-header {
+	margin-top: 1em;
+}
+
 .entry-meta, .meta, .comment-meta {
 	font-size: 0.7em;
 }
@@ -274,7 +278,7 @@ article {
 	color: inherit;
 }
 
-.author, time, .cat-links, .tag-links, .edit-link, .comments-link {
+span.author, time, .cat-links, .tag-links, .edit-link, .comments-link {
 	background: url('./img/sprites.png') no-repeat left -82px;
 	padding-left: 25px;
 	margin-right: 1em;

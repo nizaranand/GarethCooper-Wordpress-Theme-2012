@@ -357,7 +357,20 @@ function garethcooper_enhanced_image_navigation( $url ) {
 }
 add_filter( 'attachment_link', 'garethcooper_enhanced_image_navigation' );
 
+/**
+ * Add custom contact fields
+ */
+function garethcooper_get_custom_user_fields() {
+	$fields = array(
+		'facebook' => 'Facebook URL',
+		'googleplus' => 'Google+ URL',
+		'twitter' => 'Twitter URL'
+		);
+	
+	return $fields;
+}
+add_filter('user_contactmethods','garethcooper_get_custom_user_fields');
 
 /**
- * This theme was built with PHP, Semantic HTML, CSS, love, and a garethcooper.
+ * This theme was built with PHP, Semantic HTML, CSS, love, and Gareth Cooper.
  */
