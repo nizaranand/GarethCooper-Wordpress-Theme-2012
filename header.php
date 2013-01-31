@@ -20,6 +20,9 @@
 <link
 	href='http://fonts.googleapis.com/css?family=Open+Sans:400,800italic,800,700italic,700,600italic,600,400italic,300italic,300'
 	rel='stylesheet' type='text/css'>
+<link
+	href='<?php bloginfo( 'stylesheet_directory' ); ?>/fonts/roboto.1/roboto-stylesheet.css'
+	rel='stylesheet' type='text/css'>
 
 <!-- CSS -->
 <link rel="stylesheet" type="text/css" media="all"

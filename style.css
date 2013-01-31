@@ -32,17 +32,21 @@ body {
 	}
 
 h1 {
-	color: #3d3d3d;
-	font-size: 1.75em;
-	font-weight: 800;
-	font-style: italic;
-	margin: 0.5em 0 0.3em;
-}
-h1:first-child {
-	margin-top: 0;
+	color: #999;
+	color: rgba(0,0,0,.7);
+	font-family: 'RobotoThin', sans-serif;
+	font-size: 300%;
+	font-weight: 200;
+	margin: 1em 0 0.3em;
+	padding-bottom: .1em;
+	border-bottom: 2px solid #f60;
+	clear: both;
 }
 h1 a {
 	font-weight: inherit;
+}
+.single h1:FIRST-CHILD {
+	margin-top: 0;
 }
 
 h1 a:hover, h2 a:hover {
@@ -63,18 +67,31 @@ p {
 }
 
 a {
-	color: #449;
+	color: #f60;
 	font-weight: 400;
-	transition: color .5s;
-	-moz-transition: color .5s; /* Firefox 4 */
-	-webkit-transition: color .5s; /* Safari and Chrome */
-	-o-transition: color .5s; /* Opera */
+	transition: all 2s;
+	-moz-transition: all 2s; /* Firefox 4 */
+	-webkit-transition: all 2s; /* Safari and Chrome */
+	-o-transition: all 2s; /* Opera */
 	text-decoration: none;
 }
 
 a:hover {
-	text-decoration: underline;
-	color: #f60;
+	background: #f60;
+	transition: all .2s;
+	-moz-transition: all .2s; /* Firefox 4 */
+	-webkit-transition: all .2s; /* Safari and Chrome */
+	-o-transition: all .2s; /* Opera */
+	color: #fff;
+}
+
+h1 a:hover {
+	background: none;
+	color: #06f;
+}	
+
+a img {
+	display: block;
 }
 
 ul {
@@ -87,6 +104,10 @@ article {
 	clear: both;
 	margin: 0.5em 0 1.5em;
 	border-left: 2px solid #f1f1f1; 
+}
+
+img.attachment-gc-frontpage-featured {
+	box-shadow: 0 5px 40px rgba(0,0,0,0.7);
 }
 
 #content article.format-aside, #content article.format-status {
@@ -334,15 +355,15 @@ time {
 	position: relative;
 	display: inline;
 	padding: 0.5em 1em 0.5em;
-	bottom: 0.2em;
+	bottom: 0.15em;
 	margin: 0 0.5em;
 	border-radius: 5px 5px 0 0;
 	box-shadow: inset 2px 3px 3px rgba(0,0,0,0.3);
 	background-color: #404041;
-	transition: background-color .2s;
-	-moz-transition: background-color .2s; /* Firefox 4 */
-	-webkit-transition: background-color .2s; /* Safari and Chrome */
-	-o-transition: background-color .2s; /* Opera */
+	transition: all 2s;
+	-moz-transition: all 2s; /* Firefox 4 */
+	-webkit-transition: all 2s; /* Safari and Chrome */
+	-o-transition: all 2s; /* Opera */
 }
 #access a {
 	color: #f7f7f7;
@@ -351,12 +372,12 @@ time {
 	text-decoration: none;
 	width: 100%;
 }
-#access li.current_page_item {
-	background-color: #f7f7f7;
+#access li.current-menu-item {
+	background-color: #F1F2F3;
 	box-shadow: none;
 }
 	
-#access li.current_page_item a {
+#access li.current-menu-item a {
 	color: #454546;
 }
 
@@ -396,6 +417,10 @@ time {
 }
 #access li:hover {
 	background-color: #f60;
+	transition: all .2s;
+	-moz-transition: all .2s; /* Firefox 4 */
+	-webkit-transition: all .2s; /* Safari and Chrome */
+	-o-transition: all .2s; /* Opera */
 	box-shadow: none;
 }
 #access li:hover > a,

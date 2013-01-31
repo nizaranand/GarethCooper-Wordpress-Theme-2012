@@ -22,7 +22,7 @@ $options = get_option( 'garethcooper_theme_options' );
 		<?php echo get_the_post_thumbnail($post->ID, 'gc-frontpage-featured'); ?>
 	</div>
 
-	<div class="yui3-u-1-3" id="frontpage-text">
+	<div class="yui3-u-1" id="frontpage-text">
 		<div class="gridPadding">
 			<?php while ( have_posts() ) : the_post(); ?>
 			<h1 class="entry-title">
@@ -33,7 +33,7 @@ $options = get_option( 'garethcooper_theme_options' );
 		</div>
 	</div>
 
-	<div class="yui3-u-1-3" id="frontpage-images">
+	<div class="yui3-u-1" id="frontpage-images">
 		<div class="gridPadding">
 			<h1>Latest Images</h1>
 
@@ -52,17 +52,6 @@ $options = get_option( 'garethcooper_theme_options' );
 			endif;
 			?>
 
-		</div>
-	</div>
-
-	<div class="yui3-u-1-3" id="frontpage-latest">
-		<div class="gridPadding">
-			<h1>Latest Posts</h1>
-			<ul>
-				<?php wp_get_archives(array(
-				'type' => 'postbypost',
-								'limit'=> 5)); ?>
-			</ul>
 		</div>
 	</div>
 
