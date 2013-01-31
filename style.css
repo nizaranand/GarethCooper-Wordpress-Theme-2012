@@ -45,15 +45,13 @@ h1 {
 h1 a {
 	font-weight: inherit;
 }
-.single h1:FIRST-CHILD {
-	margin-top: 0;
-}
 
 h1 a:hover, h2 a:hover {
 	text-decoration: none;
 }
 h2, h3, h4, h5, h6 {
 	margin: 1em 0 0.3em;
+	font-weight: 600;
 }
 
 body.single h1 {
@@ -102,8 +100,7 @@ ul {
 
 article {
 	clear: both;
-	margin: 0.5em 0 1.5em;
-	border-left: 2px solid #f1f1f1; 
+	margin: 0.5em 0 .5em;
 }
 
 img.attachment-gc-frontpage-featured {
@@ -177,7 +174,8 @@ img.attachment-gc-frontpage-featured {
 	}
 
 #footer {
-	margin-top: 2em;
+	margin-top: 3em;
+	border-top: 2px solid #f60;
 }
 #copyright {
 	text-align: right;
@@ -188,6 +186,7 @@ img.attachment-gc-frontpage-featured {
 
 #footer h1 {
 	color: #888;
+	border-color: #888;
 	margin-top: 0.5em;
 }
 
@@ -213,30 +212,6 @@ img.attachment-gc-frontpage-featured {
 .gridPadding {
 	padding: 0 1em;
 	}
-
-#content article {
-	padding: 1em;
-	border-radius: 10px;
-	
-	/* BACKGROUND GRADIENTS */
-	/* IE10 Consumer Preview */ 
-	background-image: -ms-linear-gradient(bottom right, #F2F2F2 0%, rgba(255,255,255,0) 40%);
-
-	/* Mozilla Firefox */ 
-	background-image: -moz-linear-gradient(bottom right, #F2F2F2 0%, rgba(255,255,255,0) 40%);
-	
-	/* Opera */ 
-	background-image: -o-linear-gradient(bottom right, #F2F2F2 0%, rgba(255,255,255,0));
-	
-	/* Webkit (Safari/Chrome 10) */ 
-	background-image: -webkit-gradient(linear, right bottom, left top, color-stop(0, #F2F2F2), color-stop(.4, rgba(255,255,255,0)));
-	
-	/* Webkit (Chrome 11+) */ 
-	background-image: -webkit-linear-gradient(bottom right, #F2F2F2 0%, rgba(255,255,255,0) 40%);
-	
-	/* W3C Markup, IE10 Release Preview */ 
-	background-image: linear-gradient(to top left, #F2F2F2 0%, rgba(255,255,255,0) 40%);
-}
 
 .page-header {
 	margin-top: 1em;
@@ -372,6 +347,9 @@ time {
 	text-decoration: none;
 	width: 100%;
 }
+li a, li a:hover {
+	background: none;
+}
 #access li.current-menu-item {
 	background-color: #F1F2F3;
 	box-shadow: none;
@@ -387,7 +365,7 @@ time {
 	background-color: #f60;
 	display: none;
 	position: absolute;
-	top: 102%;
+	top: 96%;
 	left: 0;
 	z-index: 99999;
 	border-left: 2px solid #f60;
