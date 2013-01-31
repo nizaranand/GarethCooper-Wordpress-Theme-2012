@@ -35,7 +35,7 @@
 		</div>
 	</div>	<!-- #footer -->
 	
-	<div id="copyright" class="yui3-u-1">© Gareth Cooper 2009-2012</div>
+	<div id="copyright" class="yui3-u-1">&copy; Gareth Cooper 2009-2013</div>
 
 	</div><!-- yui3-g -->
 	
