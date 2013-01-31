@@ -32,42 +32,41 @@ $options = get_option( 'garethcooper_theme_options' );
 			<?php endwhile; ?>
 		</div>
 	</div>
-	
+
 	<div class="yui3-u-1-3" id="frontpage-images">
 		<div class="gridPadding">
 			<h1>Latest Images</h1>
-			
+
 			<?php
-			$args = array( 'post_type' => 'post', 'numberposts' => -1 ); 
+			$args = array( 'post_type' => 'post', 'numberposts' => 10 );
 			$posts = get_posts( $args );
-			
-			if ($posts) {
-				foreach ( $posts as $post ) {
-					if (has_post_thumbnail( $post->ID )) {
-					?>
-						<a href="<?php echo get_permalink($post->ID); ?>">
-						<?php echo get_the_post_thumbnail($post->ID, 'gc-frontpage-thumb'); ?>
-						</a>
-					<?
-					}
-				}
-			}
+
+			if ($posts) :
+			foreach ( $posts as $post ) :
+			if (has_post_thumbnail( $post->ID )) :
 			?>
-			
+			<a href="<?php echo get_permalink($post->ID); ?>"><?php echo get_the_post_thumbnail($post->ID, 'gc-frontpage-thumb'); ?></a>
+			<?php
+			endif;
+			endforeach;
+			endif;
+			?>
+
 		</div>
 	</div>
-	
+
 	<div class="yui3-u-1-3" id="frontpage-latest">
 		<div class="gridPadding">
 			<h1>Latest Posts</h1>
 			<ul>
 				<?php wp_get_archives(array(
-						'type' => 'postbypost',
+				'type' => 'postbypost',
 								'limit'=> 5)); ?>
 			</ul>
 		</div>
 	</div>
-	
-</div> <!-- #content -->
+
+</div>
+<!-- #content -->
 
 <?php get_footer(); ?>

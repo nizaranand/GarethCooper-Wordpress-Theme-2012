@@ -1,3 +1,5 @@
 *.db
 *.psd
 *~
+.settings
+Thumbs.db

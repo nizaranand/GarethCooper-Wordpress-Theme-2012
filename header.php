@@ -17,10 +17,13 @@
 <title><?php wp_title(); ?></title>
 
 <!-- webfonts -->
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,800italic,800,700italic,700,600italic,600,400italic,300italic,300'	rel='stylesheet' type='text/css'>
+<link
+	href='http://fonts.googleapis.com/css?family=Open+Sans:400,800italic,800,700italic,700,600italic,600,400italic,300italic,300'
+	rel='stylesheet' type='text/css'>
 
 <!-- CSS -->
-<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
+<link rel="stylesheet" type="text/css" media="all"
+	href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 
@@ -34,7 +37,7 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="everything" class="yui3-g">
+	<div id="everything" class="yui3-g">
 		<div id="menubar" class="yui3-u-1">
 			<div id="access" class="central">
 				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
