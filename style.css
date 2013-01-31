@@ -35,9 +35,8 @@ body {
 h1 {
 	font-size: 300%;
 	margin: 1em 0 0.3em;
-	padding-bottom: .1em;
 	border-bottom: 2px solid #f60;
-	clear: both;
+	padding-bottom: .1em;
 }
 
 h1 a {
@@ -49,7 +48,9 @@ h1 a {
 }
 
 h2 {
-	font-size: 150%;
+	font-size: 200%;
+	border-bottom: 1px solid #ddd;
+	padding-bottom: .15em;
 }
 
 h2,h3,h4,h5,h6 {
@@ -62,6 +63,7 @@ h1,h2 {
 	color: rgba(0, 0, 0, .7);
 	font-family: 'RobotoThin', sans-serif;
 	font-weight: 200;
+	clear: both;
 }
 
 .single h1, .page h1 {
@@ -109,6 +111,10 @@ article {
 	margin: 0.5em 0 .5em;
 }
 
+.single article {
+	margin-bottom: 2em;
+}
+
 img.attachment-gc-frontpage-featured {
 	box-shadow: 0 5px 40px rgba(0, 0, 0, 0.7);
 	margin-top: 1em;
@@ -118,7 +124,7 @@ img.attachment-gc-frontpage-featured {
 	background: none;
 }
 
-#content article.format-aside,.single article,.page article {
+#content article.format-aside,.page article {
 	border: none;
 	margin: 0;
 }
@@ -506,16 +512,16 @@ img.size-auto,img.size-full,img.size-large,img.size-medium,.attachment img,.widg
 }
 
 .wp-caption {
-	padding: .5em;
 	text-align: center;
 }
 
 .wp-caption img {
-	margin: .25em;
+	margin-right: .25em;
 }
 
 .wp-caption .wp-caption-text {
-	margin: .5em;
+	font-size: 75%;
+	text-align: center;
 }
 
 .gallery-caption {
