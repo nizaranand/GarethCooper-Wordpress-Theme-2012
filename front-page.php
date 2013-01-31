@@ -45,7 +45,9 @@ $options = get_option( 'garethcooper_theme_options' );
 			foreach ( $posts as $post ) :
 			if (has_post_thumbnail( $post->ID )) :
 			?>
-			<a href="<?php echo get_permalink($post->ID); ?>"><?php echo get_the_post_thumbnail($post->ID, 'gc-frontpage-thumb'); ?></a>
+			<a href="<?php echo get_permalink($post->ID); ?>"
+				title="<?php echo get_the_title($post->ID); ?>"> <?php echo get_the_post_thumbnail($post->ID, 'gc-frontpage-thumb'); ?>
+			</a>
 			<?php
 			endif;
 			endforeach;
