@@ -32,11 +32,7 @@ body {
 	}
 
 h1 {
-	color: #999;
-	color: rgba(0,0,0,.7);
-	font-family: 'RobotoThin', sans-serif;
 	font-size: 300%;
-	font-weight: 200;
 	margin: 1em 0 0.3em;
 	padding-bottom: .1em;
 	border-bottom: 2px solid #f60;
@@ -49,9 +45,21 @@ h1 a {
 h1 a:hover, h2 a:hover {
 	text-decoration: none;
 }
+
+h2 {
+	font-size: 150%;
+}
+
 h2, h3, h4, h5, h6 {
 	margin: 1em 0 0.3em;
 	font-weight: 600;
+}
+
+h1, h2 {
+	color: #999;
+	color: rgba(0,0,0,.7);
+	font-family: 'RobotoThin', sans-serif;
+	font-weight: 200;
 }
 
 body.single h1 {
@@ -86,7 +94,7 @@ a:hover {
 h1 a:hover {
 	background: none;
 	color: #06f;
-}	
+}
 
 a img {
 	display: block;
@@ -158,6 +166,10 @@ img.attachment-gc-frontpage-featured {
 }
 #nav-below a {
 	color: #999;
+}
+#nav-below a:hover, .entry-meta a:hover {
+	color: #f60;
+	background: none;
 }
 
 .nav-previous {
@@ -272,6 +284,11 @@ img.attachment-gc-frontpage-featured {
 
 .entry-meta a {
 	color: inherit;
+}
+
+#comments {
+	border-top: 1px solid #f60;
+	clear: both;
 }
 
 span.author, time, .cat-links, .tag-links, .edit-link, .comments-link, .author-link {
