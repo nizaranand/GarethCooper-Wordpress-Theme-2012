@@ -11,8 +11,8 @@
  * @since garethcooper 0.1
  */
 ?>
-	<div id="comments">
 	<?php if ( post_password_required() ) : ?>
+	<div id="comments">
 		<p class="nopassword"><?php _e( 'This post is password protected. Enter the password to view any comments.', 'garethcooper' ); ?></p>
 	</div><!-- #comments -->
 	<?php
@@ -27,6 +27,7 @@
 	<?php // You can start editing here -- including this comment! ?>
 
 	<?php if ( have_comments() ) : ?>
+	<div id="comments">
 		<h2 id="comments-title">
 			<?php
 				printf( _n( 'One comment on &ldquo;%2$s&rdquo;', '%1$s comments on &ldquo;%2$s&rdquo;', get_comments_number(), 'garethcooper' ),
@@ -61,16 +62,8 @@
 			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'garethcooper' ) ); ?></div>
 		</nav>
 		<?php endif; // check for comment navigation ?>
-
+		
+		</div><!-- #comments -->
 	<?php endif; // have_comments() ?>
 
-	<?php
-		// If comments are closed and there are no comments, let's leave a little note, shall we?
-		if ( ! comments_open() && '0' != get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
-	?>
-		<p class="nocomments"><?php _e( 'Comments are closed.', 'garethcooper' ); ?></p>
-	<?php endif; ?>
-
 	<?php comment_form(); ?>
-
-</div><!-- #comments -->
