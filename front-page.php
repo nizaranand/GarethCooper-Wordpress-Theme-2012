@@ -23,22 +23,19 @@ $options = get_option( 'garethcooper_theme_options' );
 	</div>
 
 	<div class="yui3-u-1" id="frontpage-text">
-		<div class="gridPadding">
 			<?php while ( have_posts() ) : the_post(); ?>
 			<h1 class="entry-title">
 				<?php the_title(); ?>
 			</h1>
 			<?php the_content(); ?>
 			<?php endwhile; ?>
-		</div>
 	</div>
 
 	<div class="yui3-u-1" id="frontpage-images">
-		<div class="gridPadding">
 			<h1>Latest Images</h1>
 
 			<?php
-			$args = array( 'post_type' => 'post', 'numberposts' => 10 );
+			$args = array( 'post_type' => 'post', 'numberposts' => 20 );
 			$posts = get_posts( $args );
 
 			if ($posts) :
@@ -53,8 +50,6 @@ $options = get_option( 'garethcooper_theme_options' );
 			endforeach;
 			endif;
 			?>
-
-		</div>
 	</div>
 
 </div>
