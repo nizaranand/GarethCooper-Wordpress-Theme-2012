@@ -79,6 +79,9 @@ function garethcooper_setup() {
 	add_image_size( 'gc-frontpage-featured', 974, 400, true ); //Frontpage featured image, cropped
 	add_image_size( 'gc-frontpage-thumb', 84, 84, true ); //Frontpage thumbnail, cropped
 	
+	//Editor stylesheet
+	add_editor_style();
+	
 	// Load up our theme options page
 	//require( get_template_directory() . '/inc/theme-options.php' );
 }

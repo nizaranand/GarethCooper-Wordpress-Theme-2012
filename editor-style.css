@@ -1,0 +1,194 @@
+/*
+Theme Name: Gareth Cooper 2012 & 2013
+Theme URI: http://garethcooper.com/2012/06/gareth-cooper-2012-13-wordpress-theme/
+Author: Gareth Cooper
+Author URI: http://garethcooper.com/
+Description: garethcooper.com 2012/13 Theme. Designed to show off images as priority. Ideal for photography sites etc
+Version: 0.2
+License: GNU General Public License
+License URI: license.txt
+Tags: css3
+
+This theme, like WordPress, is licensed under the GPL.
+*/
+
+html {
+	background-color: #f7f7f7;
+	font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+	font-size: 300%;
+	margin: 0 0 0.3em;
+	padding-top: .7em;
+	border-bottom: 2px solid #f60;
+	padding-bottom: .1em;
+}
+
+h1 a {
+	font-weight: inherit;
+}
+
+h2 {
+	font-size: 200%;
+	border-bottom: 1px solid #ddd;
+	padding-bottom: .15em;
+}
+
+h2,h3,h4,h5,h6 {
+	margin: 1em 0 0.3em;
+	font-weight: 600;
+}
+
+h1,h2 {
+	color: #999;
+	color: rgba(0, 0, 0, .7);
+	font-family: 'RobotoThin', sans-serif;
+	clear: both;
+}
+
+p {
+	color: #454545;
+	text-align: justify;
+	font-weight: 300;
+}
+
+a {
+	color: #f60;
+	font-weight: 400;
+	transition: all 2s;
+	-moz-transition: all 2s; /* Firefox 4 */
+	-webkit-transition: all 2s; /* Safari and Chrome */
+	-o-transition: all 2s; /* Opera */
+	text-decoration: none;
+}
+
+a:hover {
+	background: #f60;
+	transition: all .2s;
+	-moz-transition: all .2s; /* Firefox 4 */
+	-webkit-transition: all .2s; /* Safari and Chrome */
+	-o-transition: all .2s; /* Opera */
+	color: #fff;
+}
+
+h1 a:hover {
+	background: none;
+	color: #06f;
+}
+
+ul {
+	color: #444;
+	list-style: square;
+	margin: 0 1em 0 2em;
+}
+
+.hr {
+	height: 1px;
+	width: 95%;
+	margin: 2em auto;
+	border-bottom: 1px solid #eee;
+	clear: both;
+}
+
+.thumbnail {
+	margin-right: 2em;
+}
+
+.post-image {
+	margin: 0 0 1em;
+}
+
+
+
+::selection {
+	background-color: #d60;
+}
+
+::-moz-selection {
+	background-color: #d60;
+}
+
+/* =Images
+-------------------------------------------------------------- */
+a img {
+	border: none;
+}
+
+p img {
+	margin-bottom: 0.5em;
+	/* a small bottom margin prevents content floating under images */
+}
+/*
+Resize images to fit the main content area.
+- Applies only to images uploaded via WordPress by targeting size-* classes.
+- Other images will be left alone. Use "size-auto" class to apply to other images.
+*/
+img.size-auto,img.size-full,img.size-large,img.size-medium,.attachment img,.widget-area img,.wp-caption
+	{
+	max-width: 100%;
+	/* When images are too wide for containing element, force them to fit. */
+	height: auto;
+	/* Override height to match resized width for correct aspect ratio. */
+}
+
+.alignleft {
+	margin-right: 1em;
+	float: left;
+}
+
+.alignright {
+	margin-left: 1em;
+	float: right;
+}
+
+.aligncenter {
+	clear: both;
+	display: block;
+	margin: auto;
+}
+
+.wp-caption {
+	text-align: center;
+}
+
+.wp-caption img {
+	margin-right: .25em;
+}
+
+.wp-caption .wp-caption-text {
+	font-size: 75%;
+	text-align: center;
+}
+
+.gallery-caption {
+	
+}
+
+.wp-smiley {
+	margin: 0;
+}
+
+/* =Forms
+-------------------------------------------------------------- */
+#searchform label {
+	display: none;
+}
+
+#searchform input#s {
+	width: 60%;
+}
+
+input[type=text],input#s {
+	margin: 0 1em 0 0;
+	width: 60%;
+}
+
+textarea {
+	width: 80%;
+}
+
+/* Class for labelling required form items */
+.required {
+	color: #cc0033;
+}
