@@ -75,7 +75,8 @@ h6 {
 }
 
 h2,h3,h4,h5,h6 {
-	margin: 1em 0 0.3em;
+	margin: 0 0 0.3em;
+	padding-top: .5em;
 }
 
 h1,h2,h3, h4, h5, h6 {
@@ -142,11 +143,6 @@ article.format-aside {
 
 .single article {
 	margin-bottom: 2em;
-}
-
-img.attachment-gc-frontpage-featured {
-	box-shadow: 0 5px 40px rgba(0, 0, 0, 0.7);
-	margin: 2em 0 1em;
 }
 
 .hr {
@@ -413,6 +409,16 @@ input#submit {
 	background-color: #d60;
 }
 
+/****** SCROLLERS ******/
+.scroller {
+	overflow-x: auto;
+	overflow-y: hidden; 
+}
+
+.scrollee {
+	display:inline-block;
+}
+
 /* =Menu
 -------------------------------------------------------------- */
 #access {
@@ -529,6 +535,12 @@ li.current-menu-item li {
 
 /* =Images
 -------------------------------------------------------------- */
+
+img.attachment-gc-frontpage-featured {
+	box-shadow: 0 5px 40px rgba(0, 0, 0, 0.7);
+	margin: 2em 0 1em;
+}
+
 a img {
 	border: none;
 }
