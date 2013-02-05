@@ -287,8 +287,6 @@ function garethcooper_posted_on() {
 		<div class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'garethcooper' ), __( '1 Comment', 'garethcooper' ), __( '% Comments', 'garethcooper' ) ); ?></div>
 		
 		<?php endif; ?>
-		
-		<?php edit_post_link( __( 'Edit', 'garethcooper' ), '<div class="edit-link">', '</div>' ); ?>
 		<?php
 }
 endif;

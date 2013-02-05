@@ -54,16 +54,39 @@ h2 {
 	padding-bottom: .15em;
 }
 
-h2,h3,h4,h5,h6 {
-	margin: 1em 0 0.3em;
-	font-weight: 600;
+h3 {
+	font-size: 160%;
+	border-bottom: 1px dotted #eee;
+	padding-bottom: .15em;
 }
 
-h1,h2 {
+h4 {
+	font-size: 150%;
+}
+
+h5 {
+	font-size: 130%;
+	font-style: italic;
+}
+
+h6 {
+	font-size: 110%;
+	font-style: italic;
+}
+
+h2,h3,h4,h5,h6 {
+	margin: 1em 0 0.3em;
+}
+
+h1,h2,h3, h4, h5, h6 {
 	color: #999;
 	color: rgba(0, 0, 0, .7);
 	font-family: 'RobotoThin', sans-serif;
-	font-weight: 200;
+	font-weight: normal;
+	
+}
+
+h1,h2,h3 {
 	clear: both;
 }
 
@@ -314,11 +337,6 @@ img.attachment-gc-frontpage-featured {
 	color: inherit;
 }
 
-#comments,#respond {
-	border-top: 1px solid #f60;
-	clear: both;
-}
-
 span.author,time,.cat-links,.tag-links,.edit-link,.comments-link,.author-link
 	{
 	background: url('./img/sprites.png') no-repeat left -82px;
@@ -351,6 +369,41 @@ time {
 	padding-right: 25px;
 	padding-left: 0;
 }
+
+/****** COMMENTS ******/
+
+#comments,#respond {
+	border-top: 1px solid #f60;
+	margin-top: 2em;
+	clear: both;
+}
+
+#comments h2, #respond h3 {
+	border: none;
+}
+
+.logged-in-as {
+	float:right;
+	font-size: 70%;
+}
+
+.form-allowed-tags {
+	display: none;
+}
+
+textarea#comment {
+	padding: .2em .5em;
+	margin: .5em 0;
+	width: 95%;
+}
+
+input#submit {
+	padding: .2em .5em;
+	border: 1px solid #999;
+	border-radius: 3px;
+}
+
+/****** SELECTIONS ******/
 
 ::selection {
 	background-color: #d60;
@@ -556,32 +609,6 @@ textarea {
 /* Class for labelling required form items */
 .required {
 	color: #cc0033;
-}
-
-/* =Comments
--------------------------------------------------------------- */
-article.comment {
-	display: block;
-}
-
-#respond input[type=text] {
-	display: block;
-	width: 60%;
-}
-
-#respond textarea {
-	display: block;
-	margin: 0 0 1em;
-	width: 80%;
-}
-
-#respond .form-allowed-tags {
-	clear: both;
-	width: 80%;
-}
-
-#respond .form-allowed-tags code {
-	display: block;
 }
 
 /* =Widgets

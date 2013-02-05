@@ -40,7 +40,7 @@ h2,h3,h4,h5,h6 {
 	font-weight: 600;
 }
 
-h1,h2 {
+h1,h2,h3 {
 	color: #999;
 	color: rgba(0, 0, 0, .7);
 	font-family: 'RobotoThin', sans-serif;
