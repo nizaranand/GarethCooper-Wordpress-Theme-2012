@@ -34,8 +34,7 @@ $options = get_option( 'garethcooper_theme_options' );
 	<div class="yui3-u-1" id="frontpage-images">
 			<h1>Latest Images</h1>
 			
-			<div class="scroller">
-			<div class="scrollee">
+			<div class="xscroller">
 			<?php
 			$args = array( 'post_type' => 'post', 'numberposts' => 20 );
 			$posts = get_posts( $args );
@@ -52,7 +51,6 @@ $options = get_option( 'garethcooper_theme_options' );
 			endforeach;
 			endif;
 			?>
-			</div>
 			</div>
 	</div>
 

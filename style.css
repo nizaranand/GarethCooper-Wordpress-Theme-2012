@@ -410,14 +410,10 @@ input#submit {
 }
 
 /****** SCROLLERS ******/
-.scroller {
+.xscroller {
 	overflow-x: auto;
 	overflow-y: hidden;
-	height: 110px; 
-}
-
-.scrollee {
-	display:inline-block;
+	white-space: nowrap; 
 }
 
 /* =Menu
