@@ -412,7 +412,8 @@ input#submit {
 /****** SCROLLERS ******/
 .scroller {
 	overflow-x: auto;
-	overflow-y: hidden; 
+	overflow-y: hidden;
+	height: 110px; 
 }
 
 .scrollee {
