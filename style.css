@@ -637,3 +637,20 @@ textarea {
 .widget-area .widget_search input {
 	float: left;
 }
+
+/* =Creative Commons Licence Block
+-------------------------------------------------------------- */
+.ez_cc_license_block {
+	font-size: 70%;
+	text-align: left;
+}
+
+.ez_cc_license_block img {
+	float: left;
+	margin-right: 1em;
+	margin-top: 1.5em;
+}
+
+.ez_cc_license_block {
+	margin-top: -1.5em;
+}
