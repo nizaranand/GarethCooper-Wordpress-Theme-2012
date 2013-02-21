@@ -544,6 +544,7 @@ img.attachment-gc-frontpage-featured {
 
 a img {
 	border: none;
+	display: block;
 }
 
 p img {
