@@ -535,7 +535,7 @@ li.current-menu-item li {
 
 img.attachment-gc-frontpage-featured, img.attachment-gc-full {
 	box-shadow: 0 5px 40px rgba(0, 0, 0, 0.7);
-	margin: 1em 0;
+	margin: 2em 0 2.5em;
 }
 
 img.attachment-gc-frontpage-featured {
