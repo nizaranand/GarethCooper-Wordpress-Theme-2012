@@ -416,6 +416,10 @@ input#submit {
 	white-space: nowrap; 
 }
 
+.xscroller img {
+	display: inline-block;
+}
+
 /* =Menu
 -------------------------------------------------------------- */
 #access {
