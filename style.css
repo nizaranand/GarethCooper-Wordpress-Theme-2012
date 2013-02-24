@@ -136,7 +136,7 @@ ul {
 /****** ARTICLES ******/
 article {
 	clear: both;
-	margin: 0.5em 0 .5em;
+	margin: 0.5em 0 0;
 }
 
 article.format-aside {
@@ -144,7 +144,7 @@ article.format-aside {
 }
 
 .single article {
-	margin-bottom: 2em;
+	//margin-bottom: 2em;
 }
 
 .hr {
@@ -372,6 +372,7 @@ time {
 .page-link {
 	text-align: right;
 	font-size: 70%;
+	margin-bottom: 1em;
 }
 
 .page-number {
