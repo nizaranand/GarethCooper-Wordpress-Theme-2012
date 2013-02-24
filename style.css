@@ -373,7 +373,14 @@ time {
 }
 
 .page-number {
-	padding: 1em;
+	padding: 1em;`
+}
+
+/****** MORE LINK ******/
+.more-link {
+	display: block;
+	text-align: right;
+	font-size: 90%;
 }
 
 /****** COMMENTS ******/
