@@ -120,9 +120,9 @@ a:hover {
 	color: #fff;
 }
 
-h1 a:hover {
-	background: none;
-	color: #06f;
+h1 a {
+	width: 100%;
+	display: block;
 }
 
 ul {
