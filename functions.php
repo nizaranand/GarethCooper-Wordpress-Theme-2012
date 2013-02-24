@@ -249,8 +249,8 @@ if ( ! function_exists( 'garethcooper_posted_on' ) ) :
  * @since garethcooper 1.2
  */
 function garethcooper_posted_on() {
-	printf( __( '<div><span class="author vcard">By <a class="url fn n" href="%5$s" title="%6$s" rel="author">%7$s</a></span></div>
-			<div><a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s" pubdate>%4$s</time></a></div>', 'garethcooper' ),
+	printf( __( '<div itemprop="author"><span class="author vcard" itemscope itemtype="http://schema.org/Person">By <a class="url fn n" href="%5$s" title="%6$s" rel="author" itemprop="name">%7$s</a></span></div>
+			<div><a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" itemprop="datePublished" datetime="%3$s" pubdate>%4$s</time></a></div>', 'garethcooper' ),
 		//esc_url( get_permalink() ),
 		esc_url( get_month_link(get_the_time('Y'), get_the_time('m') ) ),
 		esc_attr( get_the_time() ),
@@ -277,7 +277,7 @@ function garethcooper_posted_on() {
 				$tags_list = get_the_tag_list( '', __( ', ', 'garethcooper' ) );
 				if ( $tags_list ) :
 			?>
-			<div class="tag-links">
+			<div class="tag-links" itemprop="keywords">
 				<?php printf( __( '%1$s', 'garethcooper' ), $tags_list ); ?>
 			</div>
 			<?php endif; // End if $tags_list ?>

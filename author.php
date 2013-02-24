@@ -9,7 +9,7 @@
 get_header(); ?>
 
 <div id="content" class="yui3-g central">
-	<div class="yui3-u-1-2">
+	<div class="yui3-u-1">
 
 			<?php if ( have_posts() ) : ?>
 
@@ -31,9 +31,9 @@ get_header(); ?>
 				the_author_meta('description');
 				?>
 		</div>
-		<div class="yui3-u-1-2" style="text-align:right;">
+		<div class="yui3-u-1">
 				
-				<h2><?php the_author(); ?> on the Web</h2>
+				<h6><?php the_author(); ?> on the Web</h6>
 				
 				<div class="entry-meta">
 				<?php
@@ -65,7 +65,7 @@ get_header(); ?>
 		</div>
 		<div class="yui3-u-1">
 				
-				<h2>Posts by <?php the_author(); ?></h2>
+				<h6>Posts by <?php the_author(); ?></h6>
 				
 				<?php
 					/* Since we called the_post() above, we need to
