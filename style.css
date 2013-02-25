@@ -335,7 +335,7 @@ article.format-aside {
 	color: inherit;
 }
 
-span.author,time,.cat-links,.tag-links,.edit-link,.comments-link,.author-link
+span.author,time.entry-date,.cat-links,.tag-links,.edit-link,.comments-link,.author-link
 	{
 	background: url('./img/sprites.png') no-repeat left -82px;
 	padding-left: 25px;
@@ -623,6 +623,24 @@ img.size-auto,img.size-full,img.size-large,img.size-medium,.attachment img,.widg
 
 .wp-smiley {
 	margin: 0;
+}
+
+.image-metadata {
+	border: none;
+	font-size: 90%;
+}
+
+.image-metadata td {
+	border: none;
+	vertical-align: baseline;
+	padding: 0.2em .5em;
+}
+
+.image-meta-title {
+	font-style:italic;
+	//font-size: 90%;
+	width: 8em;
+	text-align: right;
 }
 
 /* =Forms
