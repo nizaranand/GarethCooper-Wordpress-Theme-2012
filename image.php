@@ -73,13 +73,13 @@ get_header(); ?>
 				<?php $metadata = wp_get_attachment_metadata(); ?>
 
 				<div class="yui3-g">
+					<?php if (!empty($metadata['image_meta']['latitude']) && !empty($metadata['image_meta']['longitude']) ) : ?>
 					<div class="yui3-u-1-2">
-						<?php if (!empty($metadata['image_meta']['latitude']) && !empty($metadata['image_meta']['longitude']) ) : ?>
 						<div id="map_canvas"
 							style="width: 100%; height: 16em; background: #eee;"></div>
 						<?php wp_enqueue_script('google_maps_implementation', get_template_directory_uri().'/js/googlemaps.js.php?lat='.getGps($metadata['image_meta']['latitude'], $metadata['image_meta']['latitude_ref']).'&lon='.getGps($metadata['image_meta']['longitude'], $metadata['image_meta']['longitude_ref']).'&zm=13', 'google_maps', null, true); ?>
-						<?php endif; ?>
 					</div>
+					<?php endif; ?>
 
 					<div class="yui3-u-1-2">
 
@@ -155,25 +155,35 @@ get_header(); ?>
 							<?php if ( !empty($metadata['image_meta']['location']) ) : ?>
 							<tr>
 								<td class="image-meta-title">Location</td>
-								<td itemprop="contentLocation" itemscope itemtype="http://schema.org/Place">
-								<div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-								<?php if ( !empty($metadata['image_meta']['location']['sublocation']) ) :?>
-									<span itemprop="addressLocality"><?php echo $metadata['image_meta']['location']['sublocation']; ?>
-								</span>, <?php endif; ?> <?php if ( !empty($metadata['image_meta']['location']['province']) ) :?>
-									<span itemprop="addressRegion"><?php echo $metadata['image_meta']['location']['province']; ?>
-								</span>, <?php endif; ?> <?php if ( !empty($metadata['image_meta']['location']['country_name']) ) :?>
-									<span itemprop="addressCountry"><?php echo $metadata['image_meta']['location']['country_name']; ?>
-								</span> <?php endif; ?>
-								</div>
-								
-								<?php if ( !empty($metadata['image_meta']['latitude']) && !empty($metadata['image_meta']['longitude']) ) : ?>
-								<div itemprop="geo" itemscope itemtype="http://schema.org/GeoCoordinates">
-								 (<?php echo getHumanGps($metadata['image_meta']['latitude'], $metadata['image_meta']['latitude_ref']); ?>,
-								 <?php echo getHumanGps($metadata['image_meta']['longitude'], $metadata['image_meta']['longitude_ref']); ?>)
-								 	<meta itemprop="latitude" content="<?php echo getGps($metadata['image_meta']['latitude'], $metadata['image_meta']['latitude_ref']); ?>" />
-    								<meta itemprop="longitude" content="<?php echo getGps($metadata['image_meta']['longitude'], $metadata['image_meta']['longitude_ref']); ?>" />
-								</div>
-								<?php endif; ?>
+								<td itemprop="contentLocation" itemscope
+									itemtype="http://schema.org/Place">
+									<div itemprop="address" itemscope
+										itemtype="http://schema.org/PostalAddress">
+										<?php if ( !empty($metadata['image_meta']['location']['sublocation']) ) :?>
+										<span itemprop="addressLocality"><?php echo $metadata['image_meta']['location']['sublocation']; ?>
+										</span>,
+										<?php endif; ?>
+										<?php if ( !empty($metadata['image_meta']['location']['province']) ) :?>
+										<span itemprop="addressRegion"><?php echo $metadata['image_meta']['location']['province']; ?>
+										</span>,
+										<?php endif; ?>
+										<?php if ( !empty($metadata['image_meta']['location']['country_name']) ) :?>
+										<span itemprop="addressCountry"><?php echo $metadata['image_meta']['location']['country_name']; ?>
+										</span>
+										<?php endif; ?>
+									</div> <?php if ( !empty($metadata['image_meta']['latitude']) && !empty($metadata['image_meta']['longitude']) ) : ?>
+									<div itemprop="geo" itemscope
+										itemtype="http://schema.org/GeoCoordinates">
+										(
+										<?php echo getHumanGps($metadata['image_meta']['latitude'], $metadata['image_meta']['latitude_ref']); ?>
+										,
+										<?php echo getHumanGps($metadata['image_meta']['longitude'], $metadata['image_meta']['longitude_ref']); ?>
+										)
+										<meta itemprop="latitude"
+											content="<?php echo getGps($metadata['image_meta']['latitude'], $metadata['image_meta']['latitude_ref']); ?>" />
+										<meta itemprop="longitude"
+											content="<?php echo getGps($metadata['image_meta']['longitude'], $metadata['image_meta']['longitude_ref']); ?>" />
+									</div> <?php endif; ?>
 								</td>
 							</tr>
 							<?php endif; ?>

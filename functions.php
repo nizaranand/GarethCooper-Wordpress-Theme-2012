@@ -386,6 +386,7 @@ add_filter('user_contactmethods','garethcooper_get_custom_user_fields');
 /**
  * Fetch Geo Data from the image EXIF & IPTC data when using the wp_get_attachment_metadata() function
  * EXIF reading credit: {@author http://www.kristarella.com/2009/04/add-image-exif-metadata-to-wordpress/}
+ * IPTC reading by {@author Gareth Cooper http://garethcooper.com}
  * {@see http://phpgraphy.sourceforge.net/manual/latest/apas04.html} for IPTC keywords
 */
 function add_geo_exif($meta,$file,$sourceImageType) {
