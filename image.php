@@ -77,7 +77,7 @@ get_header(); ?>
 					<div class="yui3-u-1-2">
 						<div id="map_canvas"
 							style="width: 100%; height: 16em; background: #eee;"></div>
-						<?php wp_enqueue_script('google_maps_implementation', get_template_directory_uri().'/js/googlemaps.js.php?lat='.getGps($metadata['image_meta']['latitude'], $metadata['image_meta']['latitude_ref']).'&lon='.getGps($metadata['image_meta']['longitude'], $metadata['image_meta']['longitude_ref']).'&zm=13', 'google_maps', null, true); ?>
+						<?php wp_enqueue_script('google_maps_implementation', get_template_directory_uri().'/js/googlemaps.js.php?lat='.getGps($metadata['image_meta']['latitude'], $metadata['image_meta']['latitude_ref']).'&lon='.getGps($metadata['image_meta']['longitude'], $metadata['image_meta']['longitude_ref']).'&zm=13&title='.urlencode(get_the_title()), 'google_maps', null, true); ?>
 					</div>
 					<?php endif; ?>
 

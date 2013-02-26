@@ -1,6 +1,8 @@
+<?php header("Content-Type: text/javascript"); ?>
+
 var latLng = new google.maps.LatLng(
-	<?php echo $_GET['lat']; ?>,
-	<?php echo $_GET['lon']; ?>);
+	<?php echo floatval($_GET['lat']); ?>,
+	<?php echo floatval($_GET['lon']); ?>);
 	
 var mapOptions = {
 	center : latLng,
@@ -16,5 +18,7 @@ var photoMarker = new google.maps.Marker({
 	icon: {url: "http://garethcooper.com/wp-content/themes/garethcooper.com.2012/img/photo.png",
           size: new google.maps.Size(32,37)
           },
-	title: "Hi"
+    <?php if (!empty($_GET['title'])) : ?>
+	title: "Photo Location: <?php echo htmlspecialchars($_GET['title'])?>"
+	<?php endif; ?>
 });
