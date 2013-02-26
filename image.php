@@ -88,11 +88,14 @@ get_header(); ?>
 							<?php if (get_the_date() != null) : ?>
 							<tr>
 								<td class="image-meta-title">Published on</td>
-								<td><time itemprop="datePublished"
-										datetime="<?php echo get_the_date( 'c' ); ?>">
-										<?php echo get_the_date(); ?>
-									</time> by <span itemprop="provider"><?php echo get_the_author(); ?>
-								</span>
+								<td><?php
+										printf('<time itemprop="datePublished" datetime="%1$s">%2$s</time> by' .
+										  ' <a href="%4$s" itemprop="provider">%3$s</a>',
+										get_the_date( 'c' ),
+										get_the_date(),
+										get_the_author(),
+										get_author_posts_url( get_the_author_meta( 'ID' ) )
+										); ?> 
 								</td>
 							</tr>
 							<?php endif; ?>
@@ -100,14 +103,16 @@ get_header(); ?>
 							<?php if ($metadata['image_meta']['created_timestamp'] != null ) : ?>
 							<tr>
 								<td class="image-meta-title">Taken At</td>
-								<td><time itemprop="dateCreated"
-										datetime="<?php echo date_i18n('c' , $metadata['image_meta']['created_timestamp']); ?>">
-										<?php echo date_i18n(get_option('time_format') , $metadata['image_meta']['created_timestamp']) ; ?>
-										on
-										<?php echo date_i18n(get_option('date_format') , $metadata['image_meta']['created_timestamp']) ; ?>
-									</time> <?php if($metadata['image_meta']['credit'] != null ) : ?>
-									by <span itemprop="creator"><?php echo $metadata['image_meta']['credit']; ?>
-								</span> <?php endif; ?>
+								<td><?php
+								printf('<time itemprop="dateCreated" datetime="%1$s">%2$s on %3$s</time>',
+									date_i18n('c' , $metadata['image_meta']['created_timestamp']),
+									date_i18n(get_option('time_format') , $metadata['image_meta']['created_timestamp']),
+									date_i18n(get_option('date_format') , $metadata['image_meta']['created_timestamp'])
+									); ?>
+									
+									<?php if($metadata['image_meta']['credit'] != null ) : ?>
+									by <span itemprop="creator"><?php echo $metadata['image_meta']['credit']; ?></span>
+									<?php endif; ?>
 								</td>
 							</tr>
 							<?php endif; ?>
@@ -115,7 +120,8 @@ get_header(); ?>
 							<?php if ($metadata['image_meta']['aperture'] != null) : ?>
 							<tr>
 								<td class="image-meta-title">Aperture</td>
-								<td>f/<?php echo $metadata['image_meta']['aperture']; ?></td>
+								<td>f/<?php echo $metadata['image_meta']['aperture']; ?>
+								</td>
 							</tr>
 							<?php endif; ?>
 
@@ -184,7 +190,8 @@ get_header(); ?>
 										<meta itemprop="longitude"
 											content="<?php echo getGps($metadata['image_meta']['longitude'], $metadata['image_meta']['longitude_ref']); ?>" />
 									</div>
-									<meta itemprop="map" content="https://maps.google.com/maps?q=loc:<?php echo getGps($metadata['image_meta']['latitude'], $metadata['image_meta']['latitude_ref']); ?>,<?php echo getGps($metadata['image_meta']['longitude'], $metadata['image_meta']['longitude_ref']); ?>&t=m&z=15" />
+									<meta itemprop="map"
+										content="https://maps.google.com/maps?q=loc:<?php echo getGps($metadata['image_meta']['latitude'], $metadata['image_meta']['latitude_ref']); ?>,<?php echo getGps($metadata['image_meta']['longitude'], $metadata['image_meta']['longitude_ref']); ?>&t=m&z=15" />
 									<?php endif; ?>
 								</td>
 							</tr>
