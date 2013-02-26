@@ -115,7 +115,7 @@ get_header(); ?>
 							<?php if ($metadata['image_meta']['aperture'] != null) : ?>
 							<tr>
 								<td class="image-meta-title">Aperture</td>
-								<td><?php echo $metadata['image_meta']['aperture']; ?></td>
+								<td>f/<?php echo $metadata['image_meta']['aperture']; ?></td>
 							</tr>
 							<?php endif; ?>
 
@@ -183,15 +183,14 @@ get_header(); ?>
 											content="<?php echo getGps($metadata['image_meta']['latitude'], $metadata['image_meta']['latitude_ref']); ?>" />
 										<meta itemprop="longitude"
 											content="<?php echo getGps($metadata['image_meta']['longitude'], $metadata['image_meta']['longitude_ref']); ?>" />
-									</div> <?php endif; ?>
+									</div>
+									<meta itemprop="map" content="https://maps.google.com/maps?q=loc:<?php echo getGps($metadata['image_meta']['latitude'], $metadata['image_meta']['latitude_ref']); ?>,<?php echo getGps($metadata['image_meta']['longitude'], $metadata['image_meta']['longitude_ref']); ?>&t=m&z=15" />
+									<?php endif; ?>
 								</td>
 							</tr>
 							<?php endif; ?>
 
 						</table>
-
-
-
 					</div>
 				</div>
 
@@ -209,7 +208,7 @@ get_header(); ?>
 					//var_dump($iptc);
 				}
 					
-				//$exif = exif_read_data( $img_src[0] );
+				$exif = exif_read_data( $img_src[0] );
 				//print_r($exif);
 				?>
 				</pre>
