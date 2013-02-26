@@ -265,16 +265,23 @@ if ( ! function_exists( 'garethcooper_posted_on' ) ) :
 */
 function garethcooper_posted_on() {
 	printf( __( '<div itemprop="author"><span class="author vcard" itemscope itemtype="http://schema.org/Person">By <a class="url fn n" href="%5$s" title="%6$s" rel="author" itemprop="name">%7$s</a></span></div>
- 		<div><a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" itemprop="datePublished" datetime="%3$s" pubdate>%4$s</time></a></div>', 'garethcooper' ),
+ 		<div><a href="%1$s" title="View all posts from %2$s" ><time class="entry-date" itemprop="datePublished" datetime="%3$s" pubdate>%4$s</time></a></div>', 'garethcooper' ),
  		//esc_url( get_permalink() ),
 	esc_url( get_month_link(get_the_time('Y'), get_the_time('m') ) ),
-	esc_attr( get_the_time() ),
+	esc_attr( get_the_date( 'F Y') ),
 	esc_attr( get_the_date( 'c' ) ),
 	esc_html( get_the_date() ),
 	esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
 	esc_attr( sprintf( __( 'View all posts by %s', 'garethcooper' ), get_the_author() ) ),
-	esc_html( get_the_author() )
+	esc_html( get_the_author() )	 
 	);
+	
+	if (get_the_modified_date() != get_the_date() ) :
+		printf('<div style="margin-right:1em">(Last modified <time itemprop="dateModified" datetime="%1$s">%2$s</time>)</div>',
+			esc_attr( get_the_modified_date( 'c' ) ),
+			esc_attr( get_the_modified_date() )
+		);
+	endif;
 
 	if ( 'post' == get_post_type() ) : // Hide category and tag text for pages on Search ?>
 	<?php
@@ -295,7 +302,10 @@ function garethcooper_posted_on() {
 
 	<?php if ( comments_open() || ( '0' != get_comments_number() && ! comments_open() ) ) : ?>
 	<div class="comments-link">
-		<?php comments_popup_link( __( 'Leave a comment', 'garethcooper' ), __( '1 Comment', 'garethcooper' ), __( '% Comments', 'garethcooper' ) ); ?>
+		<?php printf( '<a href="%1$s" title="Comment on %2$s" itemprop="discussionUrl">Leave a comment</a>',
+			esc_url( get_permalink() ) . '#respond',
+			esc_html ( get_the_title() )
+			);  ?>
 	</div> <?php endif; ?> <?php
 }
 endif;

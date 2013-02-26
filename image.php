@@ -217,6 +217,7 @@ get_header(); ?>
 					
 				$exif = exif_read_data( $img_src[0] );
 				//print_r($exif);
+				
 				?>
 				</pre>
 			</div>

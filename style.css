@@ -342,7 +342,7 @@ span.author,time.entry-date,.cat-links,.tag-links,.edit-link,.comments-link,.aut
 	margin-right: 1em;
 }
 
-time {
+time.entry-date {
 	background-position: left -2px;
 }
 
