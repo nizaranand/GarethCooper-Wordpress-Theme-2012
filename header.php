@@ -19,9 +19,6 @@
 <link
 	href='http://fonts.googleapis.com/css?family=Open+Sans:600,300italic,300'
 	rel='stylesheet' type='text/css'>
-<link
-	href='<?php bloginfo( 'stylesheet_directory' ); ?>/fonts/roboto.1/roboto-stylesheet.css'
-	rel='stylesheet' type='text/css'>
 
 <!-- CSS -->
 <link rel="stylesheet" type="text/css" media="all"
@@ -39,10 +36,10 @@
 </head>
 
 <body <?php body_class(); ?>>
-	<div id="everything" class="yui3-g">
-		<div id="menubar" class="yui3-u-1">
-			<div id="access" class="central">
-				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-			</div>
-		</div>
-		<!-- #menubar -->
+	<div id="everything">
+		<div id="header" class="central">
+			<span class="site-title"><a href="<?php echo site_url(); ?>"><span style="color:#ccc;">gareth</span>cooper</a></span>
+				<div id="access">
+					<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+				</div>
+			</div> <!-- .central -->

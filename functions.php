@@ -114,15 +114,6 @@ add_filter( 'wp_page_menu_args', 'garethcooper_page_menu_args' );
  * Register widgetized area and update sidebar with default widgets
 */
 function garethcooper_widgets_init() {
-	register_sidebar( array(
-	'name' => __( 'Home Page Main Block', 'garethcooper' ),
-	'id' => 'home-main'
-			) );
-
-	register_sidebar( array(
-	'name' => __( 'Sidebar', 'garethcooper' ),
-	'id' => 'sidebar'
-			) );
 
 	register_sidebar( array(
 	'name' => __( 'Footer Column 1', 'garethcooper' ),

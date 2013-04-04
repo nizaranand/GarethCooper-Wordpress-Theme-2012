@@ -14,6 +14,8 @@
 
 get_header(); ?>
 
+<!-- index.php -->
+
 <div id="content" class="yui3-g central">
 
 	<?php if ( have_posts() ) : ?>

@@ -16,13 +16,13 @@ get_header();
 $options = get_option( 'garethcooper_theme_options' );
 ?>
 
-<div id="content" class="yui3-g central">
+<div id="content" class="central">
 
 	<div id="imageRotator" class="yui3-u-1">
 		<?php echo get_the_post_thumbnail($post->ID, 'gc-frontpage-featured'); ?>
 	</div>
 
-	<div class="yui3-u-1" id="frontpage-text">
+	<div id="frontpage-text">
 			<?php while ( have_posts() ) : the_post(); ?>
 			<h1 class="entry-title">
 				<?php the_title(); ?>
@@ -31,7 +31,7 @@ $options = get_option( 'garethcooper_theme_options' );
 			<?php endwhile; ?>
 	</div>
 
-	<div class="yui3-u-1" id="frontpage-images">
+	<div id="frontpage-images">
 			<h1>Latest Images</h1>
 			
 			<div class="xscroller">
