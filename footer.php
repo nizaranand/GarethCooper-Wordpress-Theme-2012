@@ -9,6 +9,8 @@
  */
 ?>
 
+<div style="clear:both"></div>
+
 <div id="footer">
 	<div class="central">
 		<div class="col3">

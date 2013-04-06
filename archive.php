@@ -15,13 +15,11 @@ get_header(); ?>
 
 <!-- archive.php -->
 
-<div id="content" class="yui3-g central">
+<div id="content" class="central">
 	<?php if ( have_posts() ) : ?>
-	
-	<div class="yui3-u-1">
 
-	<header class="page-header">
-		<h1 class="page-title">
+	<header>
+		<div class="breadcrumb">
 			<?php
 			if ( is_day() ) :
 			printf( __( 'Daily Archives: %s', 'toolbox' ), '<span>' . get_the_date() . '</span>' );
@@ -35,7 +33,7 @@ get_header(); ?>
 			_e( 'Archives', 'toolbox' );
 			endif;
 			?>
-		</h1>
+		</div>
 	</header>
 
 	<?php rewind_posts(); ?>
@@ -83,5 +81,4 @@ get_header(); ?>
 <!-- #content -->
 
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>
