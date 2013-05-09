@@ -72,7 +72,8 @@ function garethcooper_setup() {
 	add_theme_support( 'post-formats', array( 'aside', 'audio', 'image', 'status') );
 
 	//Theme support for thumbnails (posts & pages only)
-	add_theme_support( 'post-thumbnails', array( 'post', 'page' ) );
+	//add_theme_support( 'post-thumbnails', array( 'post', 'page' ) );
+	add_theme_support( 'post-thumbnails' );
 
 	//Full theme width image
 	add_image_size( 'gc-full', 974, 9999 ); //Full theme width (and unlimited height)
