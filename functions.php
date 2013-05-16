@@ -76,8 +76,8 @@ function garethcooper_setup() {
 	add_theme_support( 'post-thumbnails' );
 
 	//Full theme width image
-	add_image_size( 'gc-full', 974, 9999 ); //Full theme width (and unlimited height)
-	add_image_size( 'gc-frontpage-featured', 974, 400, true ); //Frontpage featured image, cropped
+	//add_image_size( 'gc-full', 974, 9999 ); //Full theme width (and unlimited height)
+	//add_image_size( 'gc-frontpage-featured', 974, 400, true ); //Frontpage featured image, cropped
 	add_image_size( 'gc-frontpage-thumb', 84, 84, true ); //Frontpage thumbnail, cropped
 
 	//Editor stylesheet

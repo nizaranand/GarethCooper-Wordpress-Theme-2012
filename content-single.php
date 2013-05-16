@@ -19,7 +19,7 @@
 	?>
 	<div class="post-image">
 		<a href="<?php echo $full_image_url[0]; ?>"
-			rel="lightbox[<?php the_ID(); ?>]"> <?php the_post_thumbnail('gc-full'); ?>
+			rel="lightbox[<?php the_ID(); ?>]"> <?php the_post_thumbnail(); ?>
 		</a>
 	</div>
 	<?php endif; ?>
