@@ -3,7 +3,7 @@ Theme Name: Gareth Cooper 2012 & 2013
 Theme URI: http://garethcooper.com/2012/06/gareth-cooper-2012-13-wordpress-theme/
 Author: Gareth Cooper
 Author URI: http://garethcooper.com/
-Description: garethcooper.com 2012/13 Theme. Designed to show off images as priority. Ideal for photography sites etc
+Description: garethcooper.com 2012/13 Theme. Designed to show off images as priority. Ideal for photography sites etc. If you like the theme, I really appreciate your <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=U84T7QHDJH6FQ&lc=GB&item_name=Gareth%20Cooper&item_number=gareth%2dcooper%2d2012%2dwordpress%2dtheme&currency_code=GBP&bn=PP%2dDonationsBF%3abtn_donate_LG%2egif%3aNonHosted">donation via Paypal</a>, however small. It takes many hours to develop fully working Wordpress themes, and your support is much appreciated.
 Version: 0.4(dev)
 License: GNU General Public License
 License URI: license.txt
@@ -11,14 +11,13 @@ Tags: css3
 
 This theme, like WordPress, is licensed under the GPL.
 */
-
 @import "base";
 
 body {
 	font-family: 'Open Sans', sans-serif;
 }
 
-h1,h2,h3, h4, h5, h6, .site-title {
+h1,h2,h3,h4,h5,h6,.site-title {
 	color: $dark_grey;
 	font-family: 'Abel', sans-serif;
 	line-height: 1.1em;
@@ -27,7 +26,7 @@ h1,h2,h3, h4, h5, h6, .site-title {
 	clear: both;
 }
 
-h1, .site-title {
+h1,.site-title {
 	font-size: 300%;
 	border-bottom: 2px solid $accent_colour;
 	padding-bottom: .1em;
@@ -133,8 +132,8 @@ article.format-aside {
 	margin: 3em 0 0;
 }
 
-.single article {
-	//margin-bottom: 2em;
+.single article { //
+	margin-bottom: 2em;
 }
 
 .hr {
@@ -150,7 +149,7 @@ article.format-aside {
 }
 
 #everything {
-	background: url('img/furley_bg/furley_bg.png') top left $light_grey;
+	background: url('img/furley_bg/furley_bg.png') top left$light_grey;
 }
 
 #content {
@@ -158,6 +157,7 @@ article.format-aside {
 }
 
 #imageRotator {
+	
 }
 
 #sidebar {
@@ -165,7 +165,6 @@ article.format-aside {
 }
 
 /****** NAVIGATION ******/
-
 #nav-below {
 	font-size: 0.8em;
 	padding: 1em 0;
@@ -189,7 +188,6 @@ article.format-aside {
 }
 
 /****** FOOTER ******/
-
 #footer,#copyright {
 	color: #d0d0d1;
 	background-color: $dark_grey;
@@ -199,23 +197,25 @@ article.format-aside {
 
 #footer {
 	margin-top: 5em;
-	border-top: 2px solid $accent_colour;
+	border-top: 2px solid$accent_colour;
 }
 
 #copyright {
 	text-align: right;
 	font-size: 0.6em;
 	color: #555;
-	color: rgba(255,255,255,.1);
+	color: rgba(255, 255, 255, .1);
 }
+
 #copyright a {
 	color: #555;
-	color: rgba(255,255,255,.1);
+	color: rgba(255, 255, 255, .1);
 	text-decoration: underline;
 }
+
 #copyright a:hover {
 	color: $accent_colour;
-	background:none;
+	background: none;
 }
 
 #footer h1 {
@@ -252,7 +252,6 @@ article.format-aside {
 }
 
 /****** .ENTRY-META AND RELATED ******/
-
 .entry-meta,.meta,.comment-meta,.breadcrumb {
 	font-size: 0.7em;
 }
@@ -313,7 +312,8 @@ article.format-aside {
 	color: inherit;
 }
 
-span.author,time.entry-date,.cat-links,.tag-links,.edit-link,.comments-link,.author-link {
+span.author,time.entry-date,.cat-links,.tag-links,.edit-link,.comments-link,.author-link
+	{
 	background: url('./img/sprites.png') no-repeat left -82px;
 	padding-left: 25px;
 	margin-right: 1em;
@@ -366,19 +366,18 @@ time.entry-date {
 }
 
 /****** COMMENTS ******/
-
 #comments,#respond {
-	border-top: 1px solid $accent_colour;
+	border-top: 1px solid$accent_colour;
 	margin-top: 2em;
 	clear: both;
 }
 
-#comments h2, #respond h3 {
+#comments h2,#respond h3 {
 	border: none;
 }
 
 .logged-in-as {
-	float:right;
+	float: right;
 	font-size: 70%;
 }
 
@@ -409,9 +408,8 @@ input#submit {
 }
 
 /****** SELECTIONS ******/
-
 ::selection {
-	background-color: #d60;
+	background-color: adjust-lightness( $accent_colour, -10);
 }
 
 ::-moz-selection {
@@ -422,7 +420,7 @@ input#submit {
 .xscroller {
 	overflow-x: auto;
 	overflow-y: hidden;
-	white-space: nowrap; 
+	white-space: nowrap;
 }
 
 .xscroller img {
@@ -436,7 +434,7 @@ input#submit {
 }
 
 #header div {
-	display:inline;
+	display: inline;
 }
 
 #access {
@@ -451,8 +449,8 @@ input#submit {
 }
 
 #access li {
-	position: relative;
-	//top: .5em;
+	position: relative; //
+	top: .5em;
 	display: inline;
 	padding: 0.5em;
 	transition: all 2s;
@@ -469,12 +467,12 @@ input#submit {
 	width: 100%;
 }
 
-#access li a, #access li a:hover {
+#access li a,#access li a:hover {
 	background: none;
 }
 
 #access li.current-menu-item {
-	border-bottom: 2px solid $accent_colour;
+	border-bottom: 2px solid$accent_colour;
 	box-shadow: none;
 }
 
@@ -487,8 +485,8 @@ input#submit {
 	top: 96%;
 	left: 0;
 	z-index: 99999;
-	border-left: 2px solid $accent_colour;
-	//padding-bottom: 10px;
+	border-left: 2px solid$accent_colour; //
+	padding-bottom: 10px;
 }
 
 #access ul ul ul {
@@ -506,6 +504,7 @@ input#submit {
 }
 
 #access ul ul li:last-child {
+	
 }
 
 #access ul ul li:hover {
@@ -539,7 +538,6 @@ input#submit {
 
 /* =Images
 -------------------------------------------------------------- */
-
 a img {
 	border: none;
 	display: block;
@@ -554,14 +552,14 @@ Resize images to fit the main content area.
 - Applies only to images uploaded via WordPress by targeting size-* classes.
 - Other images will be left alone. Use "size-auto" class to apply to other images.
 */
-img	{
+img {
 	max-width: 100%;
 	/* When images are too wide for containing element, force them to fit. */
 	height: auto;
 	/* Override height to match resized width for correct aspect ratio. */
 }
-.wp-post-image {
-	@include box-shadow(0 5px 40px rgba(0,0,0,0.7));
+
+.wp-post-image { @include box-shadow(0 5px 40px rgba(0,0,0,0.7));
 	margin: 2em 0 2.5em;
 }
 
@@ -614,8 +612,8 @@ img	{
 }
 
 .image-meta-title {
-	font-style:italic;
-	//font-size: 90%;
+	font-style: italic; //
+	font-size: 90%;
 	width: 8em;
 	text-align: right;
 }
