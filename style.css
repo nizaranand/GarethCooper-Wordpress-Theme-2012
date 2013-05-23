@@ -743,9 +743,9 @@ img {
   height: auto;
   width: auto;
   display: block;
-  -webkit-box-shadow: 0, 0, 30px, rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 0, 0, 30px, rgba(0, 0, 0, 0.5);
-  box-shadow: 0, 0, 30px, rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
 }
 
 /* line 555, sass/style.scss */
