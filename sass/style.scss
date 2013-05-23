@@ -79,11 +79,12 @@ h6 {
 
 .site-title a {
 	color: $dark_grey;
-}
-
-.site-title a:hover {
-	background: none;
-	color: adjust-lightness($dark_grey, 20);
+	
+	&:hover {
+		background: none;
+		color: adjust-lightness($accent_colour, 20);
+		@include text-shadow(0 0 10px adjust-lightness($accent-colour, 30));
+	}
 }
 
 p {
@@ -121,6 +122,11 @@ ul {
 	color: #444;
 	list-style: square;
 	margin: 0 1em 0 2em;
+}
+
+em {
+	font-weight: inherit;
+	font-style: italic;
 }
 
 /****** ARTICLES ******/
@@ -422,24 +428,25 @@ input#submit {
 }
 
 /****** SCROLLERS ******/
-.xscroller {
+#content .xscroller {
 	overflow-x: auto;
 	overflow-y: hidden;
-	white-space: nowrap; 
-}
-
-.xscroller img {
-	display: inline-block;
+	white-space: nowrap;
+	
+	img {
+		display: inline-block;
+		box-shadow: none;
+	} 
 }
 
 /* =Menu
 -------------------------------------------------------------- */
 #header {
 	padding: 1em 0;
-}
-
-#header div {
-	display:inline;
+	
+	div {
+		display:inline;
+	}
 }
 
 #access {
@@ -550,6 +557,9 @@ img {
 	height: auto;
 	width: auto;
 	display: block;
+}
+
+#content img {
 	@include box-shadow(0 0 40px rgba(0,0,0,.5));
 }
 
