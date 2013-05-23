@@ -12,74 +12,98 @@ Tags: css3
 
 This theme, like WordPress, is licensed under the GPL.
 */
-/** COLOURS **/
-/** grids **/
-/** typography **/
-/* line 17, ../../../../../../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+/* YUI 3.9.1 (build 5852) Copyright 2013 Yahoo! Inc. http://yuilibrary.com/license/ */
+/* line 2, sass/_yui3-reset.scss */
+html {
+  color: #000;
+  background: #FFF;
+}
+
+/* line 2, sass/_yui3-reset.scss */
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
   margin: 0;
   padding: 0;
-  border: 0;
-  font: inherit;
-  font-size: 100%;
-  vertical-align: baseline;
 }
 
-/* line 22, ../../../../../../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-html {
-  line-height: 1;
-}
-
-/* line 24, ../../../../../../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-ol, ul {
-  list-style: none;
-}
-
-/* line 26, ../../../../../../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 2, sass/_yui3-reset.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../../../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-caption, th, td {
-  text-align: left;
+/* line 2, sass/_yui3-reset.scss */
+fieldset, img {
+  border: 0;
+}
+
+/* line 2, sass/_yui3-reset.scss */
+address, caption, cite, code, dfn, em, strong, th, var {
+  font-style: normal;
   font-weight: normal;
-  vertical-align: middle;
 }
 
-/* line 30, ../../../../../../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-q, blockquote {
-  quotes: none;
-}
-/* line 103, ../../../../../../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-q:before, q:after, blockquote:before, blockquote:after {
-  content: "";
-  content: none;
+/* line 2, sass/_yui3-reset.scss */
+ol, ul {
+  list-style: none;
 }
 
-/* line 32, ../../../../../../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-a img {
-  border: none;
+/* line 2, sass/_yui3-reset.scss */
+caption, th {
+  text-align: left;
 }
 
-/* line 116, ../../../../../../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
-  display: block;
+/* line 2, sass/_yui3-reset.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal;
 }
 
+/* line 2, sass/_yui3-reset.scss */
+q:before, q:after {
+  content: '';
+}
+
+/* line 2, sass/_yui3-reset.scss */
+abbr, acronym {
+  border: 0;
+  font-variant: normal;
+}
+
+/* line 2, sass/_yui3-reset.scss */
+sup {
+  vertical-align: text-top;
+}
+
+/* line 2, sass/_yui3-reset.scss */
+sub {
+  vertical-align: text-bottom;
+}
+
+/* line 2, sass/_yui3-reset.scss */
+input, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/* line 2, sass/_yui3-reset.scss */
+input, textarea, select {
+  *font-size: 100%;
+}
+
+/* line 2, sass/_yui3-reset.scss */
+legend {
+  color: #000;
+}
+
+/* line 2, sass/_yui3-reset.scss */
+#yui3-css-stamp.cssreset {
+  display: none;
+}
+
+/** COLOURS **/
+/** grids **/
+/** typography **/
 /* line 61, ../../../../../../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
 * html {
   font-size: 100%;
@@ -91,12 +115,13 @@ html {
   line-height: 1.5em;
 }
 
-/* line 37, sass/style.scss */
+/* Grids */
+/* line 16, sass/style.scss */
 body {
   font-family: 'Open Sans', sans-serif;
 }
 
-/* line 41, sass/style.scss */
+/* line 20, sass/style.scss */
 h1, h2, h3, h4, h5, h6, .site-title {
   color: #454546;
   font-family: 'Abel', sans-serif;
@@ -106,49 +131,49 @@ h1, h2, h3, h4, h5, h6, .site-title {
   clear: both;
 }
 
-/* line 50, sass/style.scss */
+/* line 29, sass/style.scss */
 h1, .site-title {
   font-size: 300%;
   border-bottom: 2px solid #ff6600;
   padding-bottom: .1em;
 }
 
-/* line 56, sass/style.scss */
+/* line 35, sass/style.scss */
 h1 {
   color: #2c2c2c;
 }
 
-/* line 60, sass/style.scss */
+/* line 39, sass/style.scss */
 #frontpage-text h1 {
   padding-top: .2em;
 }
 
-/* line 64, sass/style.scss */
+/* line 43, sass/style.scss */
 h2 {
   font-size: 200%;
   border-bottom: 1px solid #ddd;
   padding-bottom: .15em;
 }
 
-/* line 70, sass/style.scss */
+/* line 49, sass/style.scss */
 h3 {
   font-size: 160%;
   border-bottom: 1px dotted #eee;
   padding-bottom: .15em;
 }
 
-/* line 76, sass/style.scss */
+/* line 55, sass/style.scss */
 h4 {
   font-size: 150%;
 }
 
-/* line 80, sass/style.scss */
+/* line 59, sass/style.scss */
 h5 {
   font-size: 130%;
   font-style: italic;
 }
 
-/* line 85, sass/style.scss */
+/* line 64, sass/style.scss */
 h6 {
   font-size: 85%;
   font-weight: 400;
@@ -156,7 +181,7 @@ h6 {
   text-transform: uppercase;
 }
 
-/* line 92, sass/style.scss */
+/* line 71, sass/style.scss */
 .site-title {
   border: none;
   font-size: 400%;
@@ -165,18 +190,18 @@ h6 {
   color: #5e5e60;
 }
 
-/* line 100, sass/style.scss */
+/* line 79, sass/style.scss */
 .site-title a {
   color: #454546;
 }
 
-/* line 104, sass/style.scss */
+/* line 83, sass/style.scss */
 .site-title a:hover {
   background: none;
   color: #787879;
 }
 
-/* line 109, sass/style.scss */
+/* line 88, sass/style.scss */
 p {
   color: #454546;
   text-align: justify;
@@ -184,7 +209,7 @@ p {
   margin-bottom: .7em;
 }
 
-/* line 116, sass/style.scss */
+/* line 95, sass/style.scss */
 a {
   color: #ff6600;
   font-weight: 400;
@@ -198,7 +223,7 @@ a {
   text-decoration: none;
 }
 
-/* line 126, sass/style.scss */
+/* line 105, sass/style.scss */
 a:hover {
   background: #ff6600;
   transition: all .2s;
@@ -211,13 +236,13 @@ a:hover {
   color: #fff;
 }
 
-/* line 135, sass/style.scss */
+/* line 114, sass/style.scss */
 h1 a {
   width: 100%;
   display: block;
 }
 
-/* line 140, sass/style.scss */
+/* line 119, sass/style.scss */
 ul {
   color: #444;
   list-style: square;
@@ -225,18 +250,18 @@ ul {
 }
 
 /****** ARTICLES ******/
-/* line 147, sass/style.scss */
+/* line 126, sass/style.scss */
 article {
   clear: both;
   margin: 0.5em 0 0;
 }
 
-/* line 152, sass/style.scss */
+/* line 131, sass/style.scss */
 article.format-aside {
   margin: 3em 0 0;
 }
 
-/* line 160, sass/style.scss */
+/* line 139, sass/style.scss */
 .hr {
   height: 1px;
   width: 95%;
@@ -245,51 +270,51 @@ article.format-aside {
   clear: both;
 }
 
-/* line 168, sass/style.scss */
+/* line 147, sass/style.scss */
 .single .hr {
   margin: auto;
 }
 
-/* line 172, sass/style.scss */
+/* line 151, sass/style.scss */
 #everything {
   background: url("img/furley_bg/furley_bg.png") top left #f7f7f7;
 }
 
-/* line 176, sass/style.scss */
+/* line 155, sass/style.scss */
 #content {
   min-height: 20em;
 }
 
-/* line 183, sass/style.scss */
+/* line 162, sass/style.scss */
 #sidebar {
   color: #999;
 }
 
 /****** NAVIGATION ******/
-/* line 189, sass/style.scss */
+/* line 168, sass/style.scss */
 #nav-below {
   font-size: 0.8em;
   padding: 1em 0;
 }
 
-/* line 194, sass/style.scss */
+/* line 173, sass/style.scss */
 #nav-below a {
   color: #999;
 }
 
-/* line 198, sass/style.scss */
+/* line 177, sass/style.scss */
 #nav-below a:hover, .entry-meta a:hover {
   color: #ff6600;
   background: none;
 }
 
-/* line 207, sass/style.scss */
+/* line 186, sass/style.scss */
 .nav-next {
   float: right;
 }
 
 /****** FOOTER ******/
-/* line 213, sass/style.scss */
+/* line 192, sass/style.scss */
 #footer, #copyright {
   color: #d0d0d1;
   background-color: #454546;
@@ -297,13 +322,13 @@ article.format-aside {
   clear: both;
 }
 
-/* line 220, sass/style.scss */
+/* line 199, sass/style.scss */
 #footer {
   margin-top: 5em;
   border-top: 2px solid #ff6600;
 }
 
-/* line 225, sass/style.scss */
+/* line 204, sass/style.scss */
 #copyright {
   text-align: right;
   font-size: 0.6em;
@@ -311,32 +336,32 @@ article.format-aside {
   color: rgba(255, 255, 255, 0.1);
 }
 
-/* line 231, sass/style.scss */
+/* line 210, sass/style.scss */
 #copyright a {
   color: #555;
   color: rgba(255, 255, 255, 0.1);
   text-decoration: underline;
 }
 
-/* line 236, sass/style.scss */
+/* line 215, sass/style.scss */
 #copyright a:hover {
   color: #ff6600;
   background: none;
 }
 
-/* line 241, sass/style.scss */
+/* line 220, sass/style.scss */
 #footer h1 {
   color: #888;
   border-color: #888;
   padding-top: 0.5em;
 }
 
-/* line 247, sass/style.scss */
+/* line 226, sass/style.scss */
 #footer a, #footer p {
   color: #999;
 }
 
-/* line 251, sass/style.scss */
+/* line 230, sass/style.scss */
 #footer select {
   background-color: #CCCCCC;
   border-color: #666;
@@ -347,29 +372,40 @@ article.format-aside {
   padding-bottom: 0.05m;
 }
 
-/* line 261, sass/style.scss */
+/* line 240, sass/style.scss */
 .central {
-  width: 974px;
-  margin: auto;
+  *zoom: 1;
+  max-width: 1380px;
+  _width: 1380px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 38, ../../../../../../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+.central:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
-/* line 266, sass/style.scss */
+/* line 244, sass/style.scss */
 .gridPadding {
   padding: 0 1em;
 }
 
-/* line 270, sass/style.scss */
+/* line 248, sass/style.scss */
 .page-header {
   margin-top: 1em;
 }
 
 /****** .ENTRY-META AND RELATED ******/
-/* line 276, sass/style.scss */
+/* line 254, sass/style.scss */
 .entry-meta, .meta, .comment-meta, .breadcrumb {
   font-size: 0.7em;
 }
 
-/* line 280, sass/style.scss */
+/* line 258, sass/style.scss */
 .meta {
   float: right;
   text-align: right;
@@ -380,63 +416,63 @@ article.format-aside {
   width: 14em;
 }
 
-/* line 290, sass/style.scss */
+/* line 268, sass/style.scss */
 .meta div {
   clear: both;
   margin: 0.5em 0;
 }
 
-/* line 295, sass/style.scss */
+/* line 273, sass/style.scss */
 .meta img {
   vertical-align: middle;
   margin-left: 0.8em;
   float: right;
 }
 
-/* line 301, sass/style.scss */
+/* line 279, sass/style.scss */
 .tagcloud {
   text-align: justify;
 }
 
-/* line 305, sass/style.scss */
+/* line 283, sass/style.scss */
 .tagcloud a {
   color: #999;
 }
 
-/* line 309, sass/style.scss */
+/* line 287, sass/style.scss */
 .thumbnail {
   margin-right: 2em;
 }
 
-/* line 313, sass/style.scss */
+/* line 291, sass/style.scss */
 .post-image {
   margin: 0 0 1em;
 }
 
-/* line 317, sass/style.scss */
+/* line 295, sass/style.scss */
 .format-aside .entry-content {
   font-style: italic;
   font-weight: 400;
 }
 
-/* line 322, sass/style.scss */
+/* line 300, sass/style.scss */
 .entry-meta {
   padding: 2em 0 1em;
   text-align: right;
   color: #999;
 }
 
-/* line 328, sass/style.scss */
+/* line 306, sass/style.scss */
 .entry-meta div {
   display: inline-block;
 }
 
-/* line 332, sass/style.scss */
+/* line 310, sass/style.scss */
 .entry-meta a {
   color: inherit;
 }
 
-/* line 336, sass/style.scss */
+/* line 314, sass/style.scss */
 span.author, time.entry-date, .cat-links, .tag-links, .edit-link, .comments-link, .author-link {
   background: url("./img/sprites.png") no-repeat left -82px;
   padding-left: 25px;
@@ -444,32 +480,32 @@ span.author, time.entry-date, .cat-links, .tag-links, .edit-link, .comments-link
   line-height: 16px;
 }
 
-/* line 343, sass/style.scss */
+/* line 321, sass/style.scss */
 time.entry-date {
   background-position: left -2px;
 }
 
-/* line 347, sass/style.scss */
+/* line 325, sass/style.scss */
 .cat-links {
   background-position: left -22px;
 }
 
-/* line 351, sass/style.scss */
+/* line 329, sass/style.scss */
 .tag-links {
   background-position: left -102px;
 }
 
-/* line 355, sass/style.scss */
+/* line 333, sass/style.scss */
 .edit-link {
   background-position: left -62px;
 }
 
-/* line 359, sass/style.scss */
+/* line 337, sass/style.scss */
 .comments-link {
   background-position: left -42px;
 }
 
-/* line 363, sass/style.scss */
+/* line 341, sass/style.scss */
 .author-link {
   background-position: right -122px;
   padding-right: 25px;
@@ -477,7 +513,7 @@ time.entry-date {
 }
 
 /****** PAGE LINKS ******/
-/* line 370, sass/style.scss */
+/* line 348, sass/style.scss */
 .page-link {
   text-align: right;
   font-size: 70%;
@@ -485,13 +521,13 @@ time.entry-date {
   clear: both;
 }
 
-/* line 377, sass/style.scss */
+/* line 355, sass/style.scss */
 .page-number {
   padding: 1em;
 }
 
 /****** MORE LINK ******/
-/* line 382, sass/style.scss */
+/* line 360, sass/style.scss */
 .more-link {
   display: block;
   text-align: right;
@@ -499,37 +535,37 @@ time.entry-date {
 }
 
 /****** COMMENTS ******/
-/* line 390, sass/style.scss */
+/* line 368, sass/style.scss */
 #comments, #respond {
   border-top: 1px solid #ff6600;
   margin-top: 2em;
   clear: both;
 }
 
-/* line 396, sass/style.scss */
+/* line 374, sass/style.scss */
 #comments h2, #respond h3 {
   border: none;
 }
 
-/* line 400, sass/style.scss */
+/* line 378, sass/style.scss */
 .logged-in-as {
   float: right;
   font-size: 70%;
 }
 
-/* line 405, sass/style.scss */
+/* line 383, sass/style.scss */
 .form-allowed-tags {
   display: none;
 }
 
-/* line 409, sass/style.scss */
+/* line 387, sass/style.scss */
 textarea#comment {
   padding: .2em .5em;
   margin: .5em 0;
   width: 95%;
 }
 
-/* line 415, sass/style.scss */
+/* line 393, sass/style.scss */
 input#submit {
   padding: .2em .5em;
   border: 1px solid #999;
@@ -537,76 +573,69 @@ input#submit {
 }
 
 /****** GRIDS *****/
-/* line 422, sass/style.scss */
-.col3 {
-  width: 2662px;
-  margin: 0 auto;
-  overflow: hidden;
-  *zoom: 1;
-}
-
-/* line 426, sass/style.scss */
+/* line 401, sass/style.scss */
 .col-1-3 {
-  display: inline;
+  width: 32.85199%;
   float: left;
-  margin-right: 10px;
-  width: 324px;
+  margin-right: 0.72202%;
+  display: inline;
 }
-/* line 147, ../../../../../../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html .col-1-3 {
-  overflow-x: hidden;
+/* line 184, ../../../../../../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/susy-1.0.8/sass/susy/_grid.scss */
+.col-1-3:nth-child(3n) {
+  float: right;
+  margin-right: 0;
 }
 
 /****** SELECTIONS ******/
-/* line 432, sass/style.scss */
+/* line 408, sass/style.scss */
 ::selection {
   background-color: #d60;
 }
 
-/* line 436, sass/style.scss */
+/* line 412, sass/style.scss */
 ::-moz-selection {
   background-color: #d60;
 }
 
 /****** SCROLLERS ******/
-/* line 441, sass/style.scss */
+/* line 417, sass/style.scss */
 .xscroller {
   overflow-x: auto;
   overflow-y: hidden;
   white-space: nowrap;
 }
 
-/* line 447, sass/style.scss */
+/* line 423, sass/style.scss */
 .xscroller img {
   display: inline-block;
 }
 
 /* =Menu
 -------------------------------------------------------------- */
-/* line 453, sass/style.scss */
+/* line 429, sass/style.scss */
 #header {
   padding: 1em 0;
 }
 
-/* line 457, sass/style.scss */
+/* line 433, sass/style.scss */
 #header div {
   display: inline;
 }
 
-/* line 461, sass/style.scss */
+/* line 437, sass/style.scss */
 #access {
   font-family: 'Abel', sans-serif;
   margin-left: 2em;
 }
 
-/* line 466, sass/style.scss */
+/* line 442, sass/style.scss */
 #access ul {
   list-style: none;
   margin: 0;
   display: inline;
 }
 
-/* line 472, sass/style.scss */
+/* line 448, sass/style.scss */
 #access li {
   position: relative;
   display: inline;
@@ -620,7 +649,7 @@ input#submit {
   /* Opera */
 }
 
-/* line 483, sass/style.scss */
+/* line 459, sass/style.scss */
 #access a {
   color: #454546;
   line-height: 2em;
@@ -629,18 +658,18 @@ input#submit {
   width: 100%;
 }
 
-/* line 491, sass/style.scss */
+/* line 467, sass/style.scss */
 #access li a, #access li a:hover {
   background: none;
 }
 
-/* line 495, sass/style.scss */
+/* line 471, sass/style.scss */
 #access li.current-menu-item {
   border-bottom: 2px solid #ff6600;
   box-shadow: none;
 }
 
-/* line 500, sass/style.scss */
+/* line 476, sass/style.scss */
 #access ul ul {
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
@@ -653,7 +682,7 @@ input#submit {
   border-left: 2px solid #ff6600;
 }
 
-/* line 513, sass/style.scss */
+/* line 489, sass/style.scss */
 #access ul ul ul {
   left: 100%;
   top: 3px;
@@ -661,7 +690,7 @@ input#submit {
   border-radius: 0;
 }
 
-/* line 520, sass/style.scss */
+/* line 496, sass/style.scss */
 #access ul ul li {
   box-shadow: none;
   margin: 0;
@@ -669,17 +698,17 @@ input#submit {
   width: 16em;
 }
 
-/* line 530, sass/style.scss */
+/* line 506, sass/style.scss */
 #access ul ul li:hover {
   background-color: #ff6600;
 }
 
-/* line 534, sass/style.scss */
+/* line 510, sass/style.scss */
 #access ul ul a {
   padding: .5em .5em .5em 1em;
 }
 
-/* line 538, sass/style.scss */
+/* line 514, sass/style.scss */
 #access li:hover {
   background-color: #ff6600;
   transition: all .2s;
@@ -692,31 +721,31 @@ input#submit {
   box-shadow: none;
 }
 
-/* line 555, sass/style.scss */
+/* line 531, sass/style.scss */
 #access ul li:hover > ul {
   display: block;
 }
 
 /* =Images
 -------------------------------------------------------------- */
-/* line 562, sass/style.scss */
+/* line 538, sass/style.scss */
 img.attachment-gc-frontpage-featured, img.attachment-gc-full {
   box-shadow: 0 5px 40px rgba(0, 0, 0, 0.7);
   margin: 2em 0 2.5em;
 }
 
-/* line 567, sass/style.scss */
+/* line 543, sass/style.scss */
 img.attachment-gc-frontpage-featured {
   margin: 2em 0 1em;
 }
 
-/* line 571, sass/style.scss */
+/* line 547, sass/style.scss */
 a img {
   border: none;
   display: block;
 }
 
-/* line 576, sass/style.scss */
+/* line 552, sass/style.scss */
 p img {
   margin-bottom: 0.5em;
   /* a small bottom margin prevents content floating under images */
@@ -727,7 +756,7 @@ Resize images to fit the main content area.
 - Applies only to images uploaded via WordPress by targeting size-* classes.
 - Other images will be left alone. Use "size-auto" class to apply to other images.
 */
-/* line 586, sass/style.scss */
+/* line 562, sass/style.scss */
 img.size-auto, img.size-full, img.size-large, img.size-medium, .attachment img, .widget-area img, .wp-caption {
   max-width: 100%;
   /* When images are too wide for containing element, force them to fit. */
@@ -735,60 +764,60 @@ img.size-auto, img.size-full, img.size-large, img.size-medium, .attachment img, 
   /* Override height to match resized width for correct aspect ratio. */
 }
 
-/* line 593, sass/style.scss */
+/* line 569, sass/style.scss */
 .alignleft {
   margin-right: 1em;
   float: left;
 }
 
-/* line 598, sass/style.scss */
+/* line 574, sass/style.scss */
 .alignright {
   margin-left: 1em;
   float: right;
 }
 
-/* line 603, sass/style.scss */
+/* line 579, sass/style.scss */
 .aligncenter {
   clear: both;
   display: block;
   margin: auto;
 }
 
-/* line 609, sass/style.scss */
+/* line 585, sass/style.scss */
 .wp-caption {
   text-align: center;
 }
 
-/* line 613, sass/style.scss */
+/* line 589, sass/style.scss */
 .wp-caption img {
   margin-right: .25em;
 }
 
-/* line 617, sass/style.scss */
+/* line 593, sass/style.scss */
 .wp-caption .wp-caption-text {
   font-size: 75%;
   text-align: center;
 }
 
-/* line 626, sass/style.scss */
+/* line 602, sass/style.scss */
 .wp-smiley {
   margin: 0;
 }
 
-/* line 630, sass/style.scss */
+/* line 606, sass/style.scss */
 .image-metadata {
   border: none;
   font-size: 90%;
 }
 
-/* line 635, sass/style.scss */
+/* line 611, sass/style.scss */
 .image-metadata td {
   border: none;
   vertical-align: baseline;
   padding: 0.2em .5em;
 }
 
-/* line 641, sass/style.scss */
+/* line 617, sass/style.scss */
 .image-meta-title {
   font-style: italic;
   width: 8em;
@@ -797,66 +826,66 @@ img.size-auto, img.size-full, img.size-large, img.size-medium, .attachment img, 
 
 /* =Forms
 -------------------------------------------------------------- */
-/* line 650, sass/style.scss */
+/* line 626, sass/style.scss */
 #searchform label {
   display: none;
 }
 
-/* line 654, sass/style.scss */
+/* line 630, sass/style.scss */
 #searchform input#s {
   width: 60%;
 }
 
-/* line 658, sass/style.scss */
+/* line 634, sass/style.scss */
 input[type=text], input#s {
   margin: 0 1em 0 0;
   width: 60%;
 }
 
-/* line 663, sass/style.scss */
+/* line 639, sass/style.scss */
 textarea {
   width: 80%;
 }
 
 /* Class for labelling required form items */
-/* line 668, sass/style.scss */
+/* line 644, sass/style.scss */
 .required {
   color: #cc0033;
 }
 
 /* =Widgets
 -------------------------------------------------------------- */
-/* line 674, sass/style.scss */
+/* line 650, sass/style.scss */
 .widget {
   display: block;
 }
 
-/* line 678, sass/style.scss */
+/* line 654, sass/style.scss */
 .widget-area .widget_search {
   overflow: hidden;
 }
 
-/* line 682, sass/style.scss */
+/* line 658, sass/style.scss */
 .widget-area .widget_search input {
   float: left;
 }
 
 /* =Creative Commons Licence Block
 -------------------------------------------------------------- */
-/* line 688, sass/style.scss */
+/* line 664, sass/style.scss */
 .ez_cc_license_block {
   font-size: 70%;
   text-align: left;
 }
 
-/* line 693, sass/style.scss */
+/* line 669, sass/style.scss */
 .ez_cc_license_block img {
   float: left;
   margin-right: 1em;
   margin-top: 1.5em;
 }
 
-/* line 699, sass/style.scss */
+/* line 675, sass/style.scss */
 .ez_cc_license_block {
   margin-top: -1.5em;
 }
