@@ -743,65 +743,68 @@ img {
   height: auto;
   width: auto;
   display: block;
+  -webkit-box-shadow: 0, 0, 30px, rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0, 0, 30px, rgba(0, 0, 0, 0.5);
+  box-shadow: 0, 0, 30px, rgba(0, 0, 0, 0.5);
 }
 
-/* line 554, sass/style.scss */
+/* line 555, sass/style.scss */
 p img {
   margin-bottom: 0.5em;
   /* a small bottom margin prevents content floating under images */
 }
 
-/* line 559, sass/style.scss */
+/* line 560, sass/style.scss */
 .alignleft {
   margin-right: 1em;
   float: left;
 }
 
-/* line 564, sass/style.scss */
+/* line 565, sass/style.scss */
 .alignright {
   margin-left: 1em;
   float: right;
 }
 
-/* line 569, sass/style.scss */
+/* line 570, sass/style.scss */
 .aligncenter {
   clear: both;
   display: block;
   margin: auto;
 }
 
-/* line 575, sass/style.scss */
+/* line 576, sass/style.scss */
 .wp-caption {
   text-align: center;
   max-width: 100%;
   box-sizing: border-box;
 }
 
-/* line 581, sass/style.scss */
+/* line 582, sass/style.scss */
 .wp-caption .wp-caption-text {
   font-size: 75%;
   text-align: center;
 }
 
-/* line 590, sass/style.scss */
+/* line 591, sass/style.scss */
 .wp-smiley {
   margin: 0;
 }
 
-/* line 594, sass/style.scss */
+/* line 595, sass/style.scss */
 .image-metadata {
   border: none;
   font-size: 90%;
 }
 
-/* line 599, sass/style.scss */
+/* line 600, sass/style.scss */
 .image-metadata td {
   border: none;
   vertical-align: baseline;
   padding: 0.2em .5em;
 }
 
-/* line 605, sass/style.scss */
+/* line 606, sass/style.scss */
 .image-meta-title {
   font-style: italic;
   width: 8em;
@@ -810,66 +813,66 @@ p img {
 
 /* =Forms
 -------------------------------------------------------------- */
-/* line 614, sass/style.scss */
+/* line 615, sass/style.scss */
 #searchform label {
   display: none;
 }
 
-/* line 618, sass/style.scss */
+/* line 619, sass/style.scss */
 #searchform input#s {
   width: 60%;
 }
 
-/* line 622, sass/style.scss */
+/* line 623, sass/style.scss */
 input[type=text], input#s {
   margin: 0 1em 0 0;
   width: 60%;
 }
 
-/* line 627, sass/style.scss */
+/* line 628, sass/style.scss */
 textarea {
   width: 80%;
 }
 
 /* Class for labelling required form items */
-/* line 632, sass/style.scss */
+/* line 633, sass/style.scss */
 .required {
   color: #cc0033;
 }
 
 /* =Widgets
 -------------------------------------------------------------- */
-/* line 638, sass/style.scss */
+/* line 639, sass/style.scss */
 .widget {
   display: block;
 }
 
-/* line 642, sass/style.scss */
+/* line 643, sass/style.scss */
 .widget-area .widget_search {
   overflow: hidden;
 }
 
-/* line 646, sass/style.scss */
+/* line 647, sass/style.scss */
 .widget-area .widget_search input {
   float: left;
 }
 
 /* =Creative Commons Licence Block
 -------------------------------------------------------------- */
-/* line 652, sass/style.scss */
+/* line 653, sass/style.scss */
 .ez_cc_license_block {
   font-size: 70%;
   text-align: left;
 }
 
-/* line 657, sass/style.scss */
+/* line 658, sass/style.scss */
 .ez_cc_license_block img {
   float: left;
   margin-right: 1em;
   margin-top: 1.5em;
 }
 
-/* line 663, sass/style.scss */
+/* line 664, sass/style.scss */
 .ez_cc_license_block {
   margin-top: -1.5em;
 }
