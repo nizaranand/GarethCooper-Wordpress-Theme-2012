@@ -32,10 +32,15 @@
 	<!-- .entry-content -->
 
 	<div class="hr"></div>
-
+	
 	<div class="entry-meta">
+		<div class="social-links" style="margin-top:4px;"><?php the_flattr_permalink() ?></div>
+		<div class="social-links"><!-- Hupso Share Buttons - http://www.hupso.com/share/ --><a class="hupso_toolbar" href="http://www.hupso.com/share/"><img src="http://static.hupso.com/share/buttons/dot.png" style="border:0px; padding-top:5px; float:left;" alt="Share Button"/></a><script type="text/javascript">var hupso_services_t=new Array("Twitter","Facebook","Google Plus","Pinterest");var hupso_toolbar_size_t="small";var hupso_twitter_via = "gaco79";</script><script type="text/javascript" src="http://static.hupso.com/share/js/share_toolbar.js"></script><!-- Hupso Share Buttons -->
+		</div> 
+		
 		<?php garethcooper_posted_on(); ?>
 	</div>
+	
 	<!-- .entry-meta -->
 </article>
 <!-- #post-<?php the_ID(); ?> -->

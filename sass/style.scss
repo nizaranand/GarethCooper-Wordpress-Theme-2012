@@ -23,7 +23,7 @@ h1,h2,h3, h4, h5, h6, .site-title {
 	font-family: 'Abel', sans-serif;
 	line-height: 1.1em;
 	margin: 0 0 0.5em;
-	padding-top: 1em;
+	padding-top: .8em;
 	clear: both;
 }
 
@@ -299,7 +299,8 @@ article.format-aside {
 }
 
 .entry-meta {
-	padding: 2em 0 1em;
+	padding: 1em 0 1em;
+	margin-top: 1em;
 	text-align: right;
 	color: #999;
 }
@@ -310,6 +311,11 @@ article.format-aside {
 
 .entry-meta a {
 	color: inherit;
+}
+
+.social-links {
+	float:left;
+	vertical-align: middle;
 }
 
 span.author,time.entry-date,.cat-links,.tag-links,.edit-link,.comments-link,.author-link {
@@ -536,35 +542,18 @@ input#submit {
 /* =Images
 -------------------------------------------------------------- */
 
-img.attachment-gc-frontpage-featured, img.attachment-gc-full {
-	box-shadow: 0 5px 40px rgba(0, 0, 0, 0.7);
-	margin: 2em 0 2.5em;
-}
-
-img.attachment-gc-frontpage-featured {
-	margin: 2em 0 1em;
-}
-
-a img {
-	border: none;
+img {
+	max-width: 100%;
+	//any higher unlikely to fit on most screens
+	max-height: 800px;
+	height: auto;
+	width: auto;
 	display: block;
 }
 
 p img {
 	margin-bottom: 0.5em;
 	/* a small bottom margin prevents content floating under images */
-}
-/*
-Resize images to fit the main content area.
-- Applies only to images uploaded via WordPress by targeting size-* classes.
-- Other images will be left alone. Use "size-auto" class to apply to other images.
-*/
-img.size-auto,img.size-full,img.size-large,img.size-medium,.attachment img,.widget-area img,.wp-caption
-	{
-	max-width: 100%;
-	/* When images are too wide for containing element, force them to fit. */
-	height: auto;
-	/* Override height to match resized width for correct aspect ratio. */
 }
 
 .alignleft {
@@ -585,10 +574,8 @@ img.size-auto,img.size-full,img.size-large,img.size-medium,.attachment img,.widg
 
 .wp-caption {
 	text-align: center;
-}
-
-.wp-caption img {
-	margin-right: .25em;
+	max-width: 100%;
+	box-sizing: border-box;
 }
 
 .wp-caption .wp-caption-text {
