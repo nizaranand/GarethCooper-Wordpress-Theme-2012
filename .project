@@ -26,7 +26,11 @@
 			<arguments>
 				<dictionary>
 					<key>LaunchConfigHandle</key>
+<<<<<<< HEAD
 					<value>&lt;project&gt;/.externalToolBuilders/Compass.launch</value>
+=======
+					<value>&lt;project&gt;/.externalToolBuilders/Compass C.launch</value>
+>>>>>>> refs/heads/dev
 				</dictionary>
 			</arguments>
 		</buildCommand>
