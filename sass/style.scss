@@ -556,7 +556,7 @@ img {
 	width: auto;
 	display: block;
 	
-	.wp-post-image {
+	&.wp-post-image {
 		@include box-shadow(0 0 40px rgba(0,0,0,.5));
 		margin-bottom: 1em;
 	}

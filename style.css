@@ -749,7 +749,7 @@ img {
   display: block;
 }
 /* line 559, sass/style.scss */
-img .wp-post-image {
+img.wp-post-image {
   -webkit-box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
   -moz-box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
