@@ -322,7 +322,6 @@ article.format-aside {
 .social-links {
 	float:left;
 	vertical-align: middle;
-	img {box-shadow: none;}
 }
 
 span.author,time.entry-date,.cat-links,.tag-links,.edit-link,.comments-link,.author-link {
@@ -435,7 +434,6 @@ input#submit {
 	
 	img {
 		display: inline-block;
-		box-shadow: none;
 	} 
 }
 
@@ -557,11 +555,13 @@ img {
 	height: auto;
 	width: auto;
 	display: block;
+	
+	.wp-post-image {
+		@include box-shadow(0 0 40px rgba(0,0,0,.5));
+		margin-bottom: 1em;
+	}
 }
 
-#content img {
-	@include box-shadow(0 0 40px rgba(0,0,0,.5));
-}
 
 p img {
 	margin-bottom: 0.5em;
